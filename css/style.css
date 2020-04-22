@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0a898d;
+}
+
+#logo > img {
+  background-image: url(/img/sogo_logo.svg);
+  width: 4rem;
+}
+
+header {
+  height: 16vh;
+  border-bottom: 1px solid white;
+  padding: 0 5vw;
+  padding-bottom: 1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header > a {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+header .nav {
+  list-style-type: none;
+}
+
+header .nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+header #nav-main {
+  -webkit-box-flex: 20;
+      -ms-flex-positive: 20;
+          flex-grow: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header #nav-main > li a {
+  padding: 0 2vw;
+}
+
+header #nav-main li:first-child {
+  position: relative;
+}
+
+header #nav-main li:first-child ul {
+  position: absolute;
+}
+
+header #nav-main li:first-child ul li {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+header #nav-sub {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #nav-sub li a {
+  padding: 0 0.5vw;
+}
+/*# sourceMappingURL=style.css.map */
