@@ -1,4 +1,5 @@
 {
+	
 	"arrProducts": [
 		{
 			"category": "shoes",
@@ -16,189 +17,192 @@
 			"price": 89.95,
 			"text": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/NMD_R1 Schuh.jpg",
+			"name": "NMD_R1 Schuh",
+			"price": 139.95,
+			"text": "High-tech design meets archive attitude. These NMD_R1 Shoes combine the best of adidas' latest technical innovations with the look of '80s racing styles. The colour-fading midsole features a big plug detail. Soft, stretchy knit hugs the foot, and responsive cushioning gives a comfortable feel."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/Falcon_Schuh.jpg",
+			"name": "FALCON SCHUH",
+			"price": 99.95,
+		    "text": "Die bunten TPU-Details und das Finish im Metallic-Look stehen für den 90s-Look.Die dämpfende, leichte EVA-Zwischensohle und das atmungsaktive Mesh-Futter sorgen für angenehmen Tragekomfort."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " " ,
+			"imgLarge": "./img/OZWEEGO_Schuh.jpg",
+			"name": "OZWEEGO SCHUH",
+			"price": 119.95,
+			"text": "Dieser Schuh ist von den späten 90ern und frühen 2000ern inspiriert und liefert einen stylishen Mix aus Retro-Elementen und futuristischem Design. Sein Obermaterial kombiniert Mesh, Wildleder und glattes TPU. Außerdem bietet er im Vorfuß- und Fersenbereich gezielten Halt und Dämpfung für ein superbequemes Tragegefühl."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/Stan_Smith_Schuh.jpg",
+			"name": "STAN SMITH SCHUH",
+			"price": 69.97,
+			"text": "Mit einem Klassiker machst du nie etwas verkehrt. Der Stan Smith räumt in Sachen Streetstyle ebenso ab wie einst sein Namensgeber auf dem Tennisplatz. Diese Version lässt den Look des Originals von 1971 mit einem minimalistischen Obermaterial aus Leder und einer cleanen Silhouette aufleben."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/CONTINENTAL_80_Schuh.jpg",
+			"name": "CONTINENTAL 80",
+			"price": 76.97,
+			"text": "Rewind it back to the era of the aerobics class. The Continental 80 is an authentic bringback of an indoor sneaker from the '80s. These low top sneakers are made of smooth leather. They show off a swooping two-tone stripe on the side and a split rubber cupsole."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/3MC_Schuh.jpg",
+			"name": "3MC SCHUH",
+			"price": 64.95,
+			"text": "Mit dem adidas 3MC holst du dir lässigen Skate-Style! Seine flexible Gummiaußensohle macht ihn ultrabequem, während der abriebfeste Zehenbereich für ein Plus an Strapazierfähigkeit beim Shredden sorgt."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/Busenitz_Schuh.jpg",
+			"name": "BUSENITZ SCHUH",
+			"price": 89.95,
+			"text": "Dieser Schuh aus der Zusammenarbeit mit Dennis Busenitz ist vom Copa Mundial Fußballschuh inspiriert und setzt auf Speed und technische Präzision. Er kommt mit einem Obermaterial aus weichem Wildleder und einem gepolsterten Schaft.."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": " ",
+			"imgLarge": "./img/Hamburg_Schuh.jpg",
+			"name": "HAMBURG SCHUH",
+			"price": 139.95,
+			"text": "Nichts geht über einen Spaziergang an der Elbpromenade. Der Hamburg war 1982 Teil der berühmten adidas City Series und zeigt sich hier in Farben, die von der Stadt selbst inspiriert sind. So erinnert das Obermaterial aus Leder mit seinen Details in Fischschuppen-Optik an den berühmten Hamburger Fischmarkt, der traditionell jeden Sonntagmorgen seine Pforten öffnet."
+
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/DEERUPT_RUNNER_Schuh.jpg",
+			"name": "DEERUPT RUNNER ",
+			"price": 69.95,
+			"text": "Der Derrupt feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Samba_Schuh.jpg",
+			"name": "LUCAS PREMIERE PRIMEKNIT SCHUH",
+			"price":68.95,
+			"text": "Das adidas Primeknit Obermaterial verpasst dem funktionalen Style des Lucas Puig Signature-Schuhs überragenden Tragekomfort und Flexibilität. Der ultraleichte Schuh passt sich deinem Fuß perfekt an und garantiert so einen sicheren Sitz und Stabilität. Die niedrigprofilierte Gummiaußensohle sorgt dabei für optimale Boardkontrolle."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Campus_Schuh.jpg",
+			"name": "CAMPUS SCHUH",
+			"price": 89.95,
+			"text": "Dieser cleane Court-Style-Sneaker ist der perfekte Begleiter für den Alltag. Er ist niedrig geschnitten und kommt mit seinem Obermaterial aus weichem Leder und den gezackten 3-Streifen ganz zeitlos daher. Die Gummi-Cupsohle rundet den Look ab. Für den adidas Signature-Style dürfen natürlich das Trefoil Logo auf der Zunge und dem Detail im Fersenbereich nicht fehlen."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Coast_Star_Schuh.jpg",
+			"name": "COAST STAR SCHUH",
+			"price": 55.95,
+		    "text": "Der Coast feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.jpg",
+			"name": "ZX 8000 SCHUH",
+			"price": 94.95,
+			"text": "Mit dem progressiven, minimalistischen Design des ZX Flux stehen dir alle Möglichkeiten offen. Diese Version setzt ganz auf puristischen Style: sowohl Mesh-Obermaterial als auch die 3-Streifen, Fersenkappe und EVA-Zwischensohle haben die gleiche Farbe.Z"
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Aqua_Adilette_Schwarz_F35543_01_standard.jpg",
+			"name": "AQUA ADILETTE",
+			"price":19.95,
+			"text": "Diese Adilette ist perfekt fürs Schwimmbad. Sie setzt auf stylishen Minimalismus, während die 3-Streifen für den adidas Signature-Style sorgen. Perfekt wird das Ganze durch die weiche Dämpfung, mit der es müde Füße nach dem Workout superbequem haben."
+		},
+		{
+			"category": "shoes",			
+			"imgSmall": "",
+			"imgLarge": "./img/Gazelle_Schuh_Blau_BB5478_01_standard.jpg",
+			"name": "GAZELLE SCHUH",
+			"price": 94.95,
+			"text": "Ein echter Low-Cut-Klassiker. Die Gazelle startete zuerst als Fußballschuh durch und ist heute nicht mehr von den Füßen der Sneakerheads wegzudenken. Mit diesem Schuh legen wir ihr Design von 1991 wieder auf, inklusive Originalfarben und der etwas breiteren Silhouette. Dabei sorgt ein Obermaterial aus Nubuk für ultrabequemen Tragekomfort."
+		},
+		
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Cloudfoam_Adilette_Blau_B42211_01_standard.jpg",
+			"name": "CLOUDFOAM ADILETTE",
+			"price": 17.95,
+			"text": "Diese Adilette ist der perfekte Begleiter am Pool oder in der Dusche. Sie hat ein schnell trocknendes Cloudfoam Fußbett für ein angenehm weiches, bequemes Tragegefühl. Der Synthetikriemen mit den kontrastierenden 3-Streifen steht außerdem für klassischen Sportstyle. Eine leichte EVA-Außensohle garantiert dabei zusätzlichen Komfort."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Adilette_Blau_G16220_01_standard.jpg",
+			"name": "ADILETTE",
+			"price": 34.95,
+			"text": "Seit ihrem Debüt 1972 hat sich die Adilette unter Athleten zum absoluten Must-have für die Dusche nach dem Training entwickelt. Inzwischen ist sie auch aus der Fashion-Welt nicht mehr wegzudenken. Diese Version kommt ganz klassisch mit einem schnell trocknenden Riemen aus PU und den legendären 3-Streifen. Das vorgeformte Fußbett und die weiche Gummiaußensohle machen das Design perfekt."
+		},
+		
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/SL_80_Schuh.jpg",
+			"name": "SL 80 SCHUH",
+			"price": 99.95,
+			"text": "Zeit für ordentlich Oldschool-Style! Dieser adidas SL 80 ist von einer Laufschuh-Silhouette aus den 70ern inspiriert. Für echtes Retro-Feeling kommt er mit einem Obermaterial aus Nylon, während die dämpfende, bequeme Zwischensohle dafür sorgt, dass du auf jeden Fall noch deinen Zug erwischt."
+		},
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/SL_72_Schuh_Blau_EG6849_01_standard.jpg",
+			"name": "SL 72 SCHUH",
+			"price": 89.95,
+			"text": "Das Jahr 1972 ist uns bis heute in Erinnerung geblieben. Die besten Athleten der Welt kämpften um Medaillen, und mit dem SL 72 Schuh feierte das legendäre Trefoil sein Debüt. Mit der klassischen Silhouette und authentischen Materialien greifen wir das Original von damals wieder auf. Genau wie bei der Version aus den 70ern ist der Zehenbereich schmal geschnitten. Außerdem garantiert die EVA-Zwischensohle optimale Dämpfung, während die Gummiaußensohle mit einem griffigen Profil im Retrostyle das Ganze abrunde"
+		},
+		
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Nite_Jogger_Schuh_Grau_FV3619_01_standard.jpg",
+			"name": "NITE JOGGER SCHUH",
+			"price": 111.95,
+			"text": "Perfekt gestylt, bei Tag und bei Nacht! Dieser Sneaker ist vom Nite Jogger aus den 80ern inspiriert und kommt mit reflektierenden Details. Mit seinem Obermaterial aus strapazierfähigem Nylon ist er leicht und gleichzeitig robust. Außerdem sorgt seine reaktionsfreudige Dämpfung für ein unschlagbares Tragegefühl."
+		},
+		
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/Daily_2.0_Schuh_Grun_EE7826_01_standard.jpg",
+			"name": "DAILY 2.0 SCHUH",
+			"price": 41.95,
+			"text": "Wir haben einem klassischem B-Ball-Look ein Update verpasst. Dieser Sneaker hat ein Obermaterial aus Canvas mit einer stylishen Waschung und kommt als Kontrast mit glatten 3-Streifen. Die strapazierfähige Gummi-Cupsohle in vulkanisierter Optik rundet das Ganze ab."
+		},
+		
+		{
+			"category": "shoes",
+			"imgSmall": "",
+			"imgLarge": "./img/ZX_Torsion_Schuh_Braun_EE5444_01_standard.jpg",
+			"name": "ZX TORSION SCHUH",
+			"price": 104.95,
+			"text": "In den 80ern revolutionierte der ZX Laufschuh, der auf den Erkenntnissen der Biomechanik basierte, mit seinem High-Tech-Design die Laufwelt. Bei dieser Streetwear-Version trifft Nostalgie-Feeling auf moderne Innovation, indem wir Vintage-Vibes und neue Materialien miteinander kombinieren. Sie ist aus ballistischem Nylon mit Wildleder-Overlays und hat eine reaktionsfreudige Boost Dämpfung, während der X-förmige Torsion Bar für ein Plus an Stabilität sorgt. Abgerundet wird der Look durch reflektierende Details."
+		},
+		
+			
+
+{
 			"category": "Sportwears",
 			"imgSmall": "",
 			"imgLarge": "./img/adicolor-stoffhut.jpg",
@@ -329,72 +333,5 @@
 			"text": "This cap comes with a pre-shaped peak and is the perfect companion for everyday life. It is also made of comfortable cotton and has a large, embroidered Trefoil on the front. Thanks to the adjustable strap, you can also adjust the width individually."
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]       
+]
 }
