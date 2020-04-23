@@ -1,36 +1,23 @@
 {
-    "arrayOfProducts": [
-        {
-            "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-            "name": "CHECK PRINT SHIRT",
-            "price": 110
-        },
-        {
-            "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-            "name": "GLORIA HIGH LOGO SNEAKER",
-            "price": 91
-        },
-        {
-            "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-            "name": "CATE RIGID BAG",
-            "price": 94.5
-        },
-        {
-            "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-            "name": "GUESS CONNECT WATCH",
-            "price": 438.9
-        },
-        {
-            "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-            "name": "'70s RETRO GLAM KEFIAH",
-            "price": 20
-        },
+	"arrProducts": [
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Superstar_Schuh_klein.png",
+			"imgLarge": "./img/Superstar_Schuh_gross.jpg",
+			"name": "Superstar Schuh",
+			"price": 99.95,
+			"text": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
+		},	
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Samba_Schuh_klein.png",
+			"imgLarge": "./img/Samba_Schuh_gross.jpg",
+			"name": "Samba Schuh",
+			"price": 89.95,
+			"text": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
+		}
+	]
 
-        {
-            "imgUrl": "/img/adidas-logo.png",
-            "name": "'70s RETRO GLAM KEFIAH",
-            "price": 20
-        }
 
-    ]
+
 }

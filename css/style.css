@@ -7,6 +7,7 @@
 
 html {
   font-family: Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 #logo > img {
   background-image: url(/img/sogo_logo.svg);
-  width: 4rem;
+  width: 3rem;
 }
 
 header {
@@ -72,10 +73,15 @@ header #nav-main li:first-child {
 
 header #nav-main li:first-child ul {
   position: absolute;
+  display: none;
 }
 
 header #nav-main li:first-child ul li {
   margin: 0.5rem 0 0 0.5rem;
+}
+
+header #nav-main li:first-child:hover ul {
+  display: block;
 }
 
 header #nav-sub {
@@ -92,5 +98,39 @@ header #nav-sub {
 
 header #nav-sub li a {
   padding: 0 0.5vw;
+  font-size: 1.2em;
+}
+
+header #nav-sub li:first-child {
+  margin-right: 2vw;
+}
+
+main {
+  padding: 0 5vw;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main > div > div {
+  display: inline-block;
+  width: 200px;
+  height: 120px;
+  background-size: cover;
+  background-position: -1.3vw -10vh;
+}
+
+main > div h2 {
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+main > div h3 {
+  color: white;
+}
+
+main > div span {
+  font-size: .6em;
 }
 /*# sourceMappingURL=style.css.map */
