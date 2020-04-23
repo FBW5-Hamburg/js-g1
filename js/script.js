@@ -51,6 +51,10 @@ window.onload = () => {
         let productPrice = document.createElement('span')
         productPrice.innerText = products[i].price + " €"
         container.append(productPrice)
+        // btn buy
+        let btnBuy = document.createElement('button')
+        btnBuy.innerText = "Buy"
+        container.append(btnBuy)
 
         document.querySelector('main').append(container)
         }

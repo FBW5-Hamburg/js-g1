@@ -8,6 +8,7 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
   color: white;
+  letter-spacing: .03rem;
 }
 
 body {
@@ -72,12 +73,18 @@ header #nav-main li:first-child {
 }
 
 header #nav-main li:first-child ul {
+  background-color: #0a898dd8;
   position: absolute;
   display: none;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
 }
 
 header #nav-main li:first-child ul li {
-  margin: 0.5rem 0 0 0.5rem;
+  font-size: 0.8rem;
+  border-top: 1px solid white;
+  margin: 0.3rem 1rem 0.5rem 1rem;
+  padding-top: .5rem;
 }
 
 header #nav-main li:first-child:hover ul {
@@ -113,24 +120,77 @@ main {
   display: flex;
 }
 
+main > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto 3vw;
+      grid-template-columns: auto auto auto 3vw;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "img img img img"  "cat cat cat cat" "name name name name" "price . btn-buy .";
+}
+
 main > div > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: img;
   display: inline-block;
-  width: 200px;
-  height: 120px;
+  width: 20vw;
+  height: 12vw;
   background-size: cover;
   background-position: -1.3vw -10vh;
 }
 
 main > div h2 {
-  font-size: 1em;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: cat;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 0.8rem;
   font-weight: lighter;
 }
 
 main > div h3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: name;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
   color: white;
+  font-size: 1rem;
+  margin-top: .3rem;
 }
 
 main > div span {
-  font-size: .6em;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: price;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 0.6rem;
+}
+
+main > div button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: btn-buy;
+  cursor: pointer;
+  width: 2rem;
+  background-color: #0a898d;
+  border: 1px solid white;
+  border-radius: .2rem;
+  font-size: 0.6rem;
+  color: white;
+  -webkit-box-shadow: .6rem .6rem .6rem #0a898d36;
+          box-shadow: .6rem .6rem .6rem #0a898d36;
+  padding: .15rem;
+  margin-top: .5rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,16 +10,23 @@ $text-color: white;
 $screen-border-left-right: 0 5vw;
 $header-bottom: 1vh;
 $nav-main-left-right: 0 2vw;
-$sub-main-top-left: .5rem 0 0 .5rem;
+$sub-main: .3rem 1rem .5rem 1rem;
 $nav-sub-left-right: 0 .5vw;
 $main-top: 10vh;
 // coordinates
-$img-width: 200px;
-$img-height: 120px;
+$img-width: 20vw;
+$img-height: 12vw;
+$bg-img-pos: -1.3vw -10vh;
+// sizes
+$category-size: .8rem;
+$name-size: 1rem;
+$price-size: .6rem;
+$sub-main-size: .8rem;
 // font
 html {
     font-family: Helvetica, Arial, sans-serif;
     color: $text-color;
+    letter-spacing: .03rem;
 }
 // background
 body {
@@ -63,10 +70,16 @@ header {
         li:first-child {
             position: relative;
             ul {
+                background-color: #0a898dd8;
                 position: absolute;
                 display: none;
+                border-bottom-right-radius: .5rem;
+                border-bottom-left-radius: .5rem;
                 li {
-                    margin: $sub-main-top-left;
+                    font-size: $sub-main-size;
+                    border-top: 1px solid white;
+                    margin: $sub-main;
+                    padding-top: .5rem;
                 }
             }
         }
@@ -89,32 +102,65 @@ header {
         }
     }
 }
-// products
+// main
 main {
     padding: $screen-border-left-right;
     margin-top: $main-top;
     display: flex;
+    // products
     > div {
+        display: grid;
+        grid-template-columns: auto auto auto 3vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "img img img img" 
+            "cat cat cat cat"
+            "name name name name"
+            "price . btn-buy ."
+        ;
         // image
         > div {
+            grid-area: img;
             display: inline-block;
             width: $img-width;
             height: $img-height;
             background-size: cover;
-            background-position:-1.3vw -10vh;
+            background-position: $bg-img-pos;
        }
        // category
        h2 {
-           font-size: 1em;
-           font-weight: lighter;
+            grid-area: cat;
+            align-self: end;
+            font-size: $category-size;
+            font-weight: lighter;
        }
        // name
        h3 {
+            grid-area: name;
+            align-self: end;
             color: $text-color;
+            font-size: $name-size;
+            margin-top: .3rem;
        }
        // price
        span {
-           font-size: .6em;
+            grid-area: price;
+            align-self: end;
+            font-size: $price-size;
+       }
+       // btn buy
+       button {
+            grid-area: btn-buy;
+            cursor: pointer;
+            width: 2rem;
+            background-color: $main-color;
+            border: 1px solid $text-color;
+            border-radius: .2rem;
+            font-size: $price-size;
+            color: $text-color;
+            box-shadow: .6rem .6rem .6rem #0a898d36;
+            padding: .15rem;
+            margin-top: .5rem;
        }
     }
 }
