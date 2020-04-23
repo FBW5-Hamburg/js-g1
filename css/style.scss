@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-// font
-html {
-    font-family: Helvetica, Arial, sans-serif;
-}
 // colours
 $main-color: #0a898d;
 $text-color: white;
@@ -16,6 +12,15 @@ $header-bottom: 1vh;
 $nav-main-left-right: 0 2vw;
 $sub-main-top-left: .5rem 0 0 .5rem;
 $nav-sub-left-right: 0 .5vw;
+$main-top: 10vh;
+// coordinates
+$img-width: 200px;
+$img-height: 120px;
+// font
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $text-color;
+}
 // background
 body {
     background-color: $main-color;
@@ -23,7 +28,7 @@ body {
 // logo
 #logo > img {
     background-image: url(/img/sogo_logo.svg);
-    width: 4rem;
+    width: 3rem;
 }
 // header
 header {
@@ -46,6 +51,7 @@ header {
             color: $text-color;
         }
     }
+    // main navigation
     #nav-main{
         flex-grow: 20;
         display: flex;
@@ -53,23 +59,62 @@ header {
         > li a {
             padding: $nav-main-left-right;
         }
+        // main sub navigation
         li:first-child {
             position: relative;
             ul {
                 position: absolute;
+                display: none;
                 li {
                     margin: $sub-main-top-left;
                 }
             }
         }
+        li:first-child:hover ul {
+            display: block;
+        }
     }
+    // sub navigation
     #nav-sub {
         flex-grow: 2;
         display: flex;
         justify-content: space-between;
         li a {
             padding: $nav-sub-left-right;
+            font-size: 1.2em;
+        }
+        // shopping cart
+        li:first-child {
+            margin-right: 2vw;
         }
     }
 }
-
+// products
+main {
+    padding: $screen-border-left-right;
+    margin-top: $main-top;
+    display: flex;
+    > div {
+        // image
+        > div {
+            display: inline-block;
+            width: $img-width;
+            height: $img-height;
+            background-size: cover;
+            background-position:-1.3vw -10vh;
+       }
+       // category
+       h2 {
+           font-size: 1em;
+           font-weight: lighter;
+       }
+       // name
+       h3 {
+            color: $text-color;
+       }
+       // price
+       span {
+           font-size: .6em;
+       }
+    }
+}

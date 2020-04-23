@@ -1,0 +1,20 @@
+{
+	"arrProducts": [
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Superstar_Schuh_klein.png",
+			"imgLarge": "./img/Superstar_Schuh_gross.jpg",
+			"name": "Superstar Schuh",
+			"price": 99.95,
+			"text": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
+		},	
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Samba_Schuh_klein.png",
+			"imgLarge": "./img/Samba_Schuh_gross.jpg",
+			"name": "Samba Schuh",
+			"price": 89.95,
+			"text": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
+		}
+	]
+}
