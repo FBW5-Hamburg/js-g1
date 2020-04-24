@@ -286,6 +286,9 @@ window.onload = () => {
         btnBuy.innerText = "Buy"
         container.append(btnBuy)
         btnBuy.addEventListener('click', e => {
+            myProduct = {
+                
+            }
             
         })
 
