@@ -1,0 +1,400 @@
+{
+	"arrProducts": [
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Superstar_Schuh_klein.png",
+			"imgLarge": "./img/Superstar_Schuh_gross.jpg",
+			"name": "Superstar Schuh",
+			"price": 99.95,
+			"text": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
+		},	
+		{
+			"category": "shoes",
+			"imgSmall": "./img/Samba_Schuh_klein.png",
+			"imgLarge": "./img/Samba_Schuh_gross.jpg",
+			"name": "Samba Schuh",
+			"price": 89.95,
+			"text": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
+		},
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/adicolor-stoffhut.jpg",
+			"name": "adicolor Stoffhut",
+            "price": 24.50,
+            "headline": "ein stoffhut mit details in gold-metallic.",
+			"text": "Mit dem Strom schwimmen? Du bist eher der Hai im Goldfischbecken. Dieser Stoffhut kommt mit Details in Gold-Metallic und zeigt sich damit genauso auffällig wie du."
+		},
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/baseball-kappe.jpg",
+			"name": "baseball kappe",
+            "price": 17.95,
+            "headline": "a ligtweight cap with an individual fit.",
+			"text": "This classic baseball cap completes your outfit. It is made of pleasantly soft material and protects you from the sun. An adidas logo on the front completes the whole thing."
+        },
+        
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/cuffed-trainingshose.jpg",
+			"name": "cuffed trainingshose.",
+            "price": 41.97,
+            "headline": "french terry pants inspired by the 1979 SST tracksuit.",
+			"text": "This casual design is inspired by the 1979 SST tracksuit. The training pants for women come with a small, contrasting Trefoil logo on the hip and contrasting 3-stripes on the legs for the typical adidas look. Thanks to the soft French terry made of cotton, it is also particularly comfortable."
+        },
+        
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/cushioned-ankle-socken_-3-paar.jpg",
+			"name": "cushioned ankle socken.",
+            "price": 9.95,
+            "headline": "A 3-pack of sporty, padded socks.",
+			"text": "With their continuous padding, these ankle-length socks are particularly comfortable. They come with an integrated arch support for a secure fit and soft seams in the toe area. The design also scores with cotton and a sporty adidas branding."
+        },
+        
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/cushioned-crew-socken_-3-paar.jpg",
+			"name": "cushioned crew socken.",
+            "price": 9.95,
+            "headline": "A 3-pack of sporty, padded socks.",
+			"text": "With their continuous padding, these ankle-length socks are particularly comfortable. They come with an integrated arch support for a secure fit and soft seams in the toe area. The design also scores with cotton and a sporty adidas branding."
+        },
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/cushioned-crew-socken_-3-paar.jpg",
+			"name": "cushioned crew socken.",
+            "price": 9.95,
+            "headline": "A 3-pack of sporty, padded socks.",
+			"text": "With their continuous padding, these ankle-length socks are particularly comfortable. They come with an integrated arch support for a secure fit and soft seams in the toe area. The design also scores with cotton and a sporty adidas branding."
+        },
+        
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/graphic-kappe.jpg",
+			"name": "graphic kappe",
+            "price": 12.95,
+            "headline": "a casual cap with UV protection.",
+			"text": "This cap with adjustable pressure closure at the back of the head and pre-shaped peak ensures that you are not dazzled. It is made of durable cotton twill and has an integrated UV protection. The design is rounded off by the adidas logo on the front, which ensures a sporty look."
+        },
+        
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/how-we-do-3-4-tight.jpg",
+			"name": "how we do 3 4 tight",
+            "price": 38.47,
+            "headline": "a breathable 3/4 tight for running.",
+			"text": "This 3/4 tight gives you an airy feeling during your workout. It is made of mesh-like Climacool material, which provides cool and dry comfort in the heat. Thanks to the soft seams, it is particularly comfortable to wear, while you always have important little things with you in the two practical pockets. adidas is committed to dealing responsibly with our environment through sustainably manufactured products. This tight was made with recycled polyester to conserve resources and reduce pollutant emissions."
+        },
+
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/low-cut-socken_-3-paar.jpg",
+			"name": "low cut socken",
+            "price": 9.07,
+            "headline": "a pack of 3 socks with the trefoil logo on the back of the foot.",
+			"text": "These low-cut socks are practically invisible, but they make your shoes a lot more comfortable. The booties are made of a stretchy cotton blend, adapt perfectly to the shape of the foot and have an integrated arch support. There are three pairs in each pack."
+        },
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/osr-w-3s-crew.jpg",
+			"name": "osr w 3s crew",
+            "price": 34.97,
+            "headline": "comfortable pullover",
+			"text": "a cool pullover with a difference"
+        },
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/sneakersocken_-3-paar.jpg",
+			"name": "sneaker socken 3 paar",
+            "price": 7.95,
+            "headline": "comortable, thin socks.",
+			"text": "Simple, minimalist, sporty. This shows these comfortable socks for children with a perfect fit. The 3-pack comes with one neutral and two strong colors."
+        },
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/terrex-liteflex-shorts.jpg",
+			"name": "terrex liteflex shorts",
+            "price": 59.95,
+            "headline": "terrex liteflex shorts.",
+			"text": "These shorts are the perfect companion when climbing or hiking. They are made of moisture-wicking material and guarantee full freedom of movement thanks to the stretch content. You can also keep your fingers warm in the pockets."
+        },
+
+        {
+			"category": "Sportwear",
+			"imgSmall": "",
+			"imgLarge": "./img/trefoil-baseball-kappe.jpg",
+			"name": "trefoil baseball kappe",
+            "price": 12.57,
+            "headline": "a sporty classic made from comfortable cotton.",
+			"text": "This cap comes with a pre-shaped peak and is the perfect companion for everyday life. It is also made of comfortable cotton and has a large, embroidered Trefoil on the front. Thanks to the adjustable strap, you can also adjust the width individually."
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]       
+}
