@@ -10,21 +10,23 @@ $text-color: white;
 $screen-border-left-right: 0 5vw;
 $header-bottom: 1vh;
 $nav-main-left-right: 0 2vw;
-$sub-main: .3rem 1rem .5rem 1rem;
+$sub-main: 1rem;
 $nav-sub-left-right: 0 .5vw;
-$main-top: 10vh;
-// coordinates
-$img-width: 20vw;
-$img-height: 12vw;
-$bg-img-pos: -1.3vw -10vh;
+$main-top: 6rem;
 // sizes
+$font: 16px;
+$header-height: 4rem;
+$bg-img-width: 20vw;
+$bg-img-height: 12vw;
+$bg-img-size: 20vw 20vh;
 $category-size: .8rem;
-$name-size: 1rem;
+$name-size: .8rem;
 $price-size: .6rem;
 $sub-main-size: .8rem;
 // font
 html {
     font-family: Helvetica, Arial, sans-serif;
+    font-size: $font;
     color: $text-color;
     letter-spacing: .03rem;
 }
@@ -34,18 +36,21 @@ body {
 }
 // logo
 #logo > img {
-    background-image: url(/img/sogo_logo.svg);
     width: 3rem;
 }
 // header
 header {
-    height: 16vh;
+    position: fixed;
+    width: 100vw;
+    height: $header-height;
+    background-color: $main-color;
     border-bottom: 1px solid white;
     padding: $screen-border-left-right;
     padding-bottom: $header-bottom;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 1;
     > a {
         flex-grow: 1;
     }
@@ -68,7 +73,7 @@ header {
         }
         // main sub navigation
         li:first-child {
-            position: relative;
+            margin-bottom: $header-bottom;
             ul {
                 background-color: #0a898dd8;
                 position: absolute;
@@ -79,7 +84,10 @@ header {
                     font-size: $sub-main-size;
                     border-top: 1px solid white;
                     margin: $sub-main;
-                    padding-top: .5rem;
+                    padding-top: $sub-main;
+                }
+                li:first-child {
+                    margin-top: 0;
                 }
             }
         }
@@ -105,8 +113,10 @@ header {
 // main
 main {
     padding: $screen-border-left-right;
-    margin-top: $main-top;
+    padding-top: $main-top;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     // products
     > div {
         display: grid;
@@ -116,40 +126,49 @@ main {
             "img img img img" 
             "cat cat cat cat"
             "name name name name"
-            "price . btn-buy ."
+            "price .  .btn-buy"
         ;
         // image
         > div {
             grid-area: img;
-            display: inline-block;
-            width: $img-width;
-            height: $img-height;
-            background-size: cover;
-            background-position: $bg-img-pos;
-       }
-       // category
-       h2 {
+            width: $bg-img-width;
+            height: $bg-img-height;
+            background-size: 20vw 20vw;
+            background-position: center;
+            transition: all .2s ease-in;
+        }
+        // zoom
+        > div:hover {
+            position: relative;
+            transform: scale(1.6);
+            background-color: white;
+            background-position: center;
+            border-radius: .6rem;
+            transition-delay: .5s;
+        }
+        // category
+        h2 {
             grid-area: cat;
             align-self: end;
             font-size: $category-size;
             font-weight: lighter;
-       }
-       // name
-       h3 {
+        }
+        // name
+        h3 {
             grid-area: name;
             align-self: end;
             color: $text-color;
             font-size: $name-size;
             margin-top: .3rem;
-       }
-       // price
-       span {
+        }
+        // price
+        span {
             grid-area: price;
             align-self: end;
             font-size: $price-size;
-       }
-       // btn buy
-       button {
+        }
+        // btn buy
+        button {
             grid-area: btn-buy;
             cursor: pointer;
             width: 2rem;
@@ -161,6 +180,30 @@ main {
             box-shadow: .6rem .6rem .6rem #0a898d36;
             padding: .15rem;
             margin-top: .5rem;
-       }
+        }
     }
+}
+/* ******************************************************************* MEDIA QUERY ******************************************************************* */
+@media only screen and (max-device-width: 920px) {
+    
+}
+@media only screen and (max-device-width: 640px) {
+    main {
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-device-width: 380px) {
+    main {
+        display: block;    
+    }
+
+$bg-img-width: 60vw;
+$bg-img-height: 48vw;
+$bg-img-size: 60vw 60vh;
+
+main > div > div {
+    width: 72vw;
+    height: 56vw;
+    background-size: 72vw 72vw;
+}
 }

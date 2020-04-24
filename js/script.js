@@ -285,6 +285,9 @@ window.onload = () => {
         let btnBuy = document.createElement('button')
         btnBuy.innerText = "Buy"
         container.append(btnBuy)
+        btnBuy.addEventListener('click', e => {
+            
+        })
 
         document.querySelector('main').append(container)
         }
