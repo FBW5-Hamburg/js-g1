@@ -260,7 +260,30 @@ function getProducts() {
         }
     })
 }
+
 window.onload = () => {
+
+    //define local stroage Array
+    let cartArray =[] 
+    //find existing cartlist
+    let jsonObj= localStorage.getItem('cartlist')
+        if(jsonObj != null){
+            //convert json to js object
+            let convertedArr= this.JSON.parse(jsonObj)
+            //add existing cartlist items to cartArray 
+            convertedArr.forEach(element =>{
+             cartArray.push(element)   
+            });
+
+            // checking number of products saved in the local storage
+                console.log(cartArray.length);
+            
+
+        }
+  // checking all products Array saved in the local storage
+
+    console.log(cartArray);
+
     getProducts().then(response => {
         for(let i = 0; i < response.length; i++) {
         let container = document.createElement('div')
@@ -285,13 +308,24 @@ window.onload = () => {
         let btnBuy = document.createElement('button')
         btnBuy.innerText = "Buy"
         container.append(btnBuy)
-        btnBuy.addEventListener('click', e => {
-            let myProduct = new product(products[i].name, "url(" + products[i].imgSmall + ")","",products[i].price,products[i].category,"","0.19")
-            console.log(myProduct);
-            
-        })
+     
 
-        document.querySelector('main').append(container)
+       
+        btnBuy.addEventListener('click', e => {
+            // create product object
+          let buyProduct = new product(products[i].name, "url(" + products[i].imgSmall + ")","",products[i].price,products[i].category,"","0.19")
+            console.log(buyProduct);
+            //add new item to the cartArray
+           cartArray.push(buyProduct)
+           //convert object to json
+            let cartArrayJson = JSON.stringify(cartArray)
+            // save items in the local storage
+            localStorage.setItem('cartlist',cartArrayJson)
+            // checking all products Array saved in the local storage
+            console.log(cartArrayJson);
+            });
+        
+          document.querySelector('main').append(container)
         }
         
         
