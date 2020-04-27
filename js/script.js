@@ -15,18 +15,27 @@ async function getHeader() {
         let data = await response.text()
         let header = document.querySelector('header')
         header.innerHTML = data
+
+        
+    
+        loadEventListeners()
+
     } else {
         console.log('Connect Error');
     }
+
 }
 
 getHeader()
 
 
 
+let sportswear = document.querySelector('#sportswear')
 
-
-
+function loadEventListeners(){
+            sportswear.addEventListener('click', function (e){
+                console.log('helo')
+            })
 
 
 
@@ -315,8 +324,11 @@ window.onload = () => {
     
     
     
-    }).catch(error => {
-        console.log(error);
+        }).catch(error => {
+            console.log(error);
         
-    })
+        })
+    }
+    
+    
 }
