@@ -288,6 +288,9 @@ window.onload = () => {
         for(let i = 0; i < response.length; i++) {
         let container = document.createElement('div')
         let products = JSON.parse(response).arrProducts
+
+        
+
         // image
         let productIMG = document.createElement('div')
         productIMG.style.backgroundImage = "url(" + products[i].imgSmall + ")"
@@ -304,28 +307,50 @@ window.onload = () => {
         let productPrice = document.createElement('span')
         productPrice.innerText = products[i].price + " €"
         container.append(productPrice)
+        
+        //quantity
+        
+        //label for amount
+        let productAmountLabel = document.createElement('label')
+        productAmountLabel.innerHTML = "Amount"
+        container.append(productAmountLabel)
+
+        //input for amount
+        let productAmount = document.createElement('input')
+        productAmount.style.type = "number"
+        container.append(productAmount)
+        
+        
         // btn buy
         let btnBuy = document.createElement('button')
         btnBuy.innerText = "Buy"
         container.append(btnBuy)
      
-
+        document.querySelector('main').append(container)
        
         btnBuy.addEventListener('click', e => {
+            //
+            window.location.href = "/cart.html";
             // create product object
           let buyProduct = new product(products[i].name, "url(" + products[i].imgSmall + ")","",products[i].price,products[i].category,"","0.19")
             console.log(buyProduct);
             //add new item to the cartArray
            cartArray.push(buyProduct)
+
+
            //convert object to json
             let cartArrayJson = JSON.stringify(cartArray)
             // save items in the local storage
             localStorage.setItem('cartlist',cartArrayJson)
             // checking all products Array saved in the local storage
             console.log(cartArrayJson);
+            //var oldDiv = document.getElementsByTagName("DIV")[0];
+            //let oldDiv = document.getElementById("div");
+            //oldDiv.remove();
+
             });
         
-          document.querySelector('main').append(container)
+          
         }
         
         
