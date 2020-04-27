@@ -1,0 +1,129 @@
+// distances
+$screen-border-size: 5vw;
+$main-top: $header-height + 1rem;
+// sizes
+$bg-img-size: 12rem;
+$bg-img-height: 8rem;
+$bg-img-position: 50% 30%;
+$category-size: .8rem;
+$name-size: .8rem;
+$price-size: .6rem;
+$sub-main-size: .8rem;
+/* ******************************************************************* PRODUCTS ******************************************************************* */
+// main
+main {
+    padding: 0 $screen-border-size;
+    padding-top: $main-top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // products
+    > div {
+        display: grid;
+        grid-template-columns: auto auto auto 3vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "img img img img" 
+            "cat cat cat cat"
+            "name name name name"
+            "price .  . btn-buy"
+        ;
+        // image
+        > div {
+            grid-area: img;
+            width: $bg-img-size;
+            height: $bg-img-height;
+            background-size: $bg-img-size;
+            background-position: $bg-img-position;
+            transition: all .1s ease-in;
+        }
+        // zoom
+        > div:hover {
+            position: relative;
+            transform: scale(1.6);
+            background-position: center;
+            border-radius: .6rem;
+            transition-delay: .5s;
+        }
+        // category
+        > h2 {
+            grid-area: cat;
+            align-self: end;
+            font-size: $category-size;
+            font-weight: lighter;
+        }
+        // name
+        > h3 {
+            grid-area: name;
+            align-self: end;
+            font-size: $name-size;
+            margin-top: .3rem;
+        }
+        // price
+        > span {
+            grid-area: price;
+            align-self: end;
+            font-size: $price-size;
+        }
+        // btn buy
+        > button {
+            grid-area: btn-buy;
+            cursor: pointer;
+            width: 2rem;
+            background-color: $main-color;
+            border: 1px solid $txt-color;
+            border-radius: .2rem;
+            font-size: $price-size;
+            color: inherit;
+            //text-shadow: .1rem .1rem .1rem #065457;
+            //box-shadow: .1rem .1rem .1rem #065457;
+            padding: .15rem;
+            margin-top: .5rem;
+        }
+    }
+}
+/* ******************************************************************* MEDIA QUERY ******************************************************************* */
+@media only screen and (max-device-width: 640px) {
+    $main-top: 4rem;
+    $category-size: 1.2rem;
+    $name-size: 1.2rem;
+    $price-size: 1em;
+    main {
+        display: block;
+        padding-top: $main-top;
+        // product container
+        > div {
+            grid-template-columns: auto auto auto auto;
+            // image
+            > div {
+                width: 90vw;
+                height: 60vw;
+                background-size: 90vw;
+            }
+            // remove zoom
+            > div:hover {
+                position: static;
+                transform: none;
+            }
+            // category
+            > h2 {
+                font-size: $category-size;
+            }
+            // name
+            > h3 {
+                font-size: $name-size;
+                margin-top: .3rem;
+            }
+            // price
+            > span {
+                font-size: $price-size;
+            }
+            // btn buy
+            > button {
+                width: 3rem;
+                padding: .2rem;
+                margin-top: .5rem;
+            }
+        }
+    }
+}
