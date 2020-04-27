@@ -337,6 +337,12 @@ window.onload = () => {
             //add new item to the cartArray
            cartArray.push(buyProduct)
 
+          let myAmount =  buyProduct.total(productAmount.value,productPrice.value);
+          // console.log(myAmount);
+          console.log(productAmount.value);
+          
+           
+
 
            //convert object to json
             let cartArrayJson = JSON.stringify(cartArray)
