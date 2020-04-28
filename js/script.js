@@ -15,6 +15,11 @@ async function getHeader() {
         let data = await response.text()
         let header = document.querySelector('header')
         header.innerHTML = data
+        let sportswear = document.querySelector('[name="sportswear"]')
+        sportswear.addEventListener('click', e => {
+            console.log(e);    
+        })
+        getSportswear()
     } else {
         console.log('Connect Error');
     }
@@ -24,226 +29,12 @@ getHeader()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ****************************************************************Rebecca********************************************************************************************* */
-let xhr = new XMLHttpRequest();
-xhr.open('GET', '/data.json');
-xhr.send();
-xhr.onload = function (){
-    if(xhr.status == 200){
-        let products = JSON.parse(xhr.response).arrayOfProducts
-        
-        for (let i = 0; i < products.length; i++){
-                
-                
-                
-                let container = document.createElement('div')
-                let productImg = document.createElement('img')
-                productImg.src = products[i].imgUrl
-                container.append(productImg)
-
-
-                let productName = document.createElement('h4')
-                productName.innerText = products[i].name
-                container.append(productName)
-
-                let productPrice = document.createElement('span')
-                productPrice.innerText = products[i].price + 'Euro'
-                container.append(productPrice)
-
-                document.body.append(container)
-                
-                
-            
-        }     
-        
-    }
+function getSportswear() {
+    let sportswear = document.querySelector('[name="sportswear"]')
+    sportswear.addEventListener('click', e => {
+        console.log(e);   
+    })
 }
-
-
-
-
 
 /* ******************************************************************** PRODUCTS ******************************************************************** */
 function getProducts() {
@@ -276,13 +67,13 @@ window.onload = () => {
             });
 
             // checking number of products saved in the local storage
-                console.log(cartArray.length);
+               // console.log(cartArray.length);
             
 
         }
   // checking all products Array saved in the local storage
 
-    console.log(cartArray);
+    //console.log(cartArray);
 
     getProducts().then(response => {
         for(let i = 0; i < response.length; i++) {
@@ -308,8 +99,6 @@ window.onload = () => {
         productPrice.innerText = products[i].price + " €"
         container.append(productPrice)
         
-        //quantity
-        
         //label for amount
         let productAmountLabel = document.createElement('label')
         productAmountLabel.innerHTML = "Amount"
@@ -317,9 +106,9 @@ window.onload = () => {
 
         //input for amount
         let productAmount = document.createElement('input')
-        productAmount.style.type = "number"
+        productAmount.setAttribute("type", "number")
+        productAmount.value = "1"
         container.append(productAmount)
-        
         
         // btn buy
         let btnBuy = document.createElement('button')
@@ -329,55 +118,39 @@ window.onload = () => {
         document.querySelector('main').append(container)
        
         btnBuy.addEventListener('click', e => {
-            //
+            //connected with cart .html
             window.location.href = "/cart.html";
             // create product object
-          let buyProduct = new product(products[i].name, "url(" + products[i].imgSmall + ")","",products[i].price,products[i].category,"","0.19")
-            console.log(buyProduct);
+            let p = parseFloat(products[i].price)
+            let a = parseFloat(productAmount.value)
+            
+          let prodTotal = (p*a).toFixed(2)
+          //instance of class
+          let buyProduct = new product(products[i].name, products[i].imgSmall,"",prodTotal,products[i].category,"","0.19",a)
+            //console.log(buyProduct);
             //add new item to the cartArray
            cartArray.push(buyProduct)
 
-          let myAmount =  buyProduct.total(productAmount.value,productPrice.value);
-          // console.log(myAmount);
-          console.log(productAmount.value);
           
            
-
-
-           //convert object to json
+          // console.log(myAmount);
+          //console.log(productAmount.value);
+          
+            //convert object to json
             let cartArrayJson = JSON.stringify(cartArray)
+
             // save items in the local storage
             localStorage.setItem('cartlist',cartArrayJson)
-            // checking all products Array saved in the local storage
-            console.log(cartArrayJson);
-            //var oldDiv = document.getElementsByTagName("DIV")[0];
-            //let oldDiv = document.getElementById("div");
-            //oldDiv.remove();
 
+            // checking all products Array saved in the local storage
+            //console.log(cartArrayJson);
+            
             });
         
           
         }
         
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     }).catch(error => {
         console.log(error);

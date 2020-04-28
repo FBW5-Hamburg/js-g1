@@ -1,0 +1,345 @@
+// colours
+$sub-nav-color: #0a898dd8;
+// distances
+$header-bottom: .3rem;
+$nav-main-left-right: 0 2vw;
+$sub-main: .6rem;
+$nav-sub-left-right: 0 .5vw;
+// sizes
+$font: 16px;
+$header-height: 4rem;
+$logo-size: 3rem;
+$sub-main-size: .8rem;
+/* ******************************************************************* HEADER ******************************************************************* */
+// font
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $font;
+    color: $txt-color;
+    letter-spacing: .03rem;
+}
+// background
+body {
+    background-color: $main-color;
+}
+// header
+header {
+    position: fixed;
+    width: 100vw;
+    height: $header-height;
+    background-color: $main-color;
+    border-bottom: 1px solid $txt-color;
+    padding: 0 $screen-border-size;
+    padding-bottom: $header-bottom;
+    display: grid;
+    grid-template-columns: 10vw auto 18vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        ". . ."
+        "logo main sub";
+    align-items: end;
+    z-index: 1;
+    // logo
+    #logo {
+        grid-area: logo;
+        > img {
+            width: $logo-size;
+        }
+    }
+    // navigation
+    > label div {
+        display: none;
+    }
+    > label:first-of-type {
+        grid-area: main;
+    }
+    > label:last-of-type {
+        grid-area: sub;
+    }
+    ul {
+        list-style-type: none;
+        li a {
+            display: block;
+            text-decoration: none;
+        }
+    }
+    // main navigation
+    #toggle-main {
+        display: none;
+    }
+    .nav {
+        display: flex;
+    }
+    #nav-main{
+        justify-content: flex-start;
+        > li a {
+            color: inherit;
+            padding: $nav-main-left-right;
+        }
+        // main sub navigation
+        > li:first-child {
+            // margin-bottom: $header-bottom;
+            > ul {
+                background-color: $sub-nav-color;
+                position: absolute;
+                display: none;
+                // border-bottom-right-radius: .5rem;
+                // border-bottom-left-radius: .5rem;
+                > li {
+                    font-size: $sub-main-size;
+                    // border-top: 1px solid $txt-color;
+                    margin: $sub-main;
+                    padding-top: $sub-main;
+                }
+                > li:first-child {
+                    margin-top: $header-bottom;
+                }
+            }
+        }
+        > li:first-child:hover ul {
+            display: block;
+        }
+    }
+    // sub navigation
+    #toggle-sub {
+        display: none;
+    }
+    #nav-sub {
+        flex-grow: 2;
+        justify-content: space-between;
+        // shopping cart
+        > li:first-child {
+            margin-right: 3vw;
+        }
+        > li > a {
+            color: inherit;
+        }
+    }
+}
+/* ******************************************************************* MEDIA QUERY ******************************************************************* */
+@media only screen and (max-device-width: 640px) {
+    // sizes
+    $toggle-width: 35vw;
+    $circle-size: 32px;
+    $line-height: 1px;
+    $line-width: 16px;
+    $dot-size: 2px;
+    // mixin
+    @mixin toggle-lines {
+        left: .5rem;
+        transition: transform .2s linear;
+    }
+    // header
+    header {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            ". . ."
+            "main logo sub";
+        #logo {
+            justify-self: center;
+        }
+        .nav {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: $toggle-width;
+            height: 100vh;
+            background-color: $sub-nav-color;
+            padding: 0 $screen-border-size;
+        }
+        // toggle bar nav-main
+        #toggle-main + label{
+            // circle
+            > div:first-child {
+                display: inline-block;
+                height: $circle-size;
+                width: $circle-size;
+                border: 1px solid $txt-color;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            // main navigation
+            #nav-main {
+                left: -$toggle-width;
+                transition: left .5s ease-in .1s;
+                // menu list
+                > li {
+                    margin-bottom: 2rem;
+                    background-color: transparent;
+                    > a {
+                        padding: 0;
+                    }
+                }
+                > li:first-child {
+                    margin-top: $header-height + 2rem;
+                }
+            }
+            // toggle lines
+            > div:last-child {
+                display: block;
+                position: absolute;
+                top: 0;
+                > span {
+                    background-color: $txt-color;
+                    height: $line-height;
+                    display: inline-block;
+                    width: $line-width;
+                    position: absolute;
+                }
+                > span:nth-child(1){
+                    @include toggle-lines();
+                    top: 1.9rem;
+                }
+                > span:nth-child(2){
+                    @include toggle-lines();
+                    top: 2.25rem;
+                }
+                > span:nth-child(3){
+                    @include toggle-lines();
+                    top:2.6rem;
+                }
+            }
+        }
+        // toggle checked
+        #toggle-main:checked + label{
+            #nav-main {
+                left: 0;
+                transition: left .5s ease-in 0s;
+            }
+            > div:last-child > span:nth-child(1) {
+                transform: rotateZ(-45deg)  translate(-.26rem, .26rem);
+            }
+            > div:last-child > span:nth-child(2) {
+                opacity: 0;
+            }
+            > div:last-child > span:nth-child(3) {
+                transform: rotateZ(45deg)  translate(-.26rem, -.26rem);
+            }
+        }
+        // toggle bar nav-sub
+        #toggle-sub  + label {
+            justify-self: end;
+            // circle
+            > div:first-child {
+                display: inline-block;
+                height: $circle-size;
+                width: $circle-size;
+                border: 1px solid $txt-color;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            // sub navigation
+            #nav-sub {
+                right: -$toggle-width;
+                transition: right .5s ease-in .1s;
+                // menu list
+                > li {
+                    margin-bottom: 2rem;
+                    text-align: right;
+                    > a {
+                        padding: 0;
+                    }
+                }
+                > li:nth-child(1) {
+                    margin-right: 0;
+                    margin-top: $header-height + 2rem;
+                    > a::before {
+                        content: "Cart ";
+                    }
+                }
+                > li:nth-child(2) {
+                    > a::before {
+                        content: "Account ";
+                    }
+                }
+                > li:nth-child(3) {
+                    > a::before {
+                        content: "Pinterest ";
+                    }
+                }
+                > li:nth-child(4) {
+                    > a::before {
+                        content: "Instagram ";
+                    }
+                }
+                > li:nth-child(5) {
+                    > a::before {
+                        content: "facebook ";
+                    }
+                }
+            }
+            // toggle dots
+            > div:last-child {
+                display: block;
+                position: absolute;
+                top: 0;
+                > span {
+                    background-color: $txt-color;
+                    height: $dot-size;
+                    display: inline-block;
+                    width: $dot-size;
+                    position: absolute;
+                }
+                > span:nth-child(1) {
+                    top: 2.25rem;
+                    left: $circle-size / 2 - $dot-size / 2 - 6px;
+                }
+                @keyframes dot-1 {
+                    0% {
+                        top: 2.25rem;
+                        left: $circle-size / 2 - $dot-size / 2 - 6px;
+                    }
+                    50% {
+                        top: 2.25rem;
+                        left: $circle-size / 2 - $dot-size / 2;
+                    }
+                    100% {
+                        top: 1.9rem;
+                        left: $circle-size / 2 - $dot-size / 2;
+                    }
+                }
+                > span:nth-child(2) {
+                    top: 2.25rem;
+                    left: $circle-size / 2 - $dot-size / 2;
+                }
+                > span:nth-child(3) {
+                    top:2.25rem;
+                    left: $circle-size / 2 - $dot-size / 2 + 6px;
+                }
+                @keyframes dot-3 {
+                    0% {
+                        top: 2.25rem;
+                        left: $circle-size / 2 - $dot-size / 2 + 6px;
+                    }
+                    50% {
+                        top: 2.25rem;
+                        left: $circle-size / 2 - $dot-size / 2;
+                    }
+                    100% {
+                        top:2.6rem;
+                        left: $circle-size / 2 - $dot-size / 2;
+                    }
+                }
+            }
+        }
+        // sub toggle checked
+        #toggle-sub:checked + label{
+            #nav-sub {
+                right: 0;
+                transition: right .5s ease-in 0s;
+            }
+            > div:last-child {
+                > span:nth-child(1) {
+                    animation: dot-1 .6s linear 0 normal forwards;
+                }
+                > span:nth-child(3) {
+                    animation: dot-3 .6s linear 0 normal forwards;
+                }
+            }
+        }
+    }
+}

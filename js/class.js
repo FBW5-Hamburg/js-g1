@@ -13,8 +13,5 @@ brutto(){
     return Math.round(this.productPrice*(1+this.tax/100)) 
 
 }
-total(amount,price){
-    return amount*price
-}
- 
+
 }
