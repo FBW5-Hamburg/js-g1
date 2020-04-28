@@ -23,23 +23,26 @@ async function getHeader() {
         let shoes = document.querySelector('[name="shoes"]')
         shoes.addEventListener('click', e => {
             console.log(e);
-        getSportswear(e)    
-        })
+        getSportswear(e)  
     } else {
         console.log('Connect Error');
     }
-
 }
 
 getHeader()
-// function loadEventListeners(){
-//             sportswear.addEventListener('click', function (e){
-//                 console.log('helo')
-//             })
-                
-    
-    
-// }
 
-
- 
+/* ******************************************************************** PRODUCTS ******************************************************************** */
+function getProducts() {
+    return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', '/data.json')
+        xhr.send()
+        xhr.onload = () => {          
+            if(xhr.status == 200){
+                resolve(xhr.response)
+            } else {
+                reject('The products could not been found.')
+            }
+        }
+    })
+}
