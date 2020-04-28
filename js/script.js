@@ -15,26 +15,15 @@ async function getHeader() {
         let data = await response.text()
         let header = document.querySelector('header')
         header.innerHTML = data
-        let sportswear = document.querySelector('[name="sportswear"]')
-        sportswear.addEventListener('click', e => {
-            console.log(e);    
-        })
-        getSportswear()
+         
     } else {
         console.log('Connect Error');
+
     }
-}
+}  
+
 
 getHeader()
-
-
-
-function getSportswear() {
-    let sportswear = document.querySelector('[name="sportswear"]')
-    sportswear.addEventListener('click', e => {
-        console.log(e);   
-    })
-}
 
 /* ******************************************************************** PRODUCTS ******************************************************************** */
 function getProducts() {
@@ -157,3 +146,6 @@ window.onload = () => {
         
     })
 }
+
+
+ 
