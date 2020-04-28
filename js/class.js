@@ -1,4 +1,4 @@
-export class product {
+class product {
     constructor(name,img_url,article_number,price,catagory,discription,tax,amount){
     this.productName = name
     this.productImg = img_url
@@ -19,5 +19,3 @@ export class product {
     }
  
 }
-
-export{product}

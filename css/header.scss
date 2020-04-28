@@ -129,6 +129,36 @@ header {
         left: .5rem;
         transition: transform .2s linear;
     }
+    // keyframes
+    @keyframes dot-1 {
+        0% {
+            top: 2.25rem;
+            left: $circle-size / 2 - $dot-size / 2 - 6px;
+        }
+        50% {
+            top: 2.25rem;
+            left: $circle-size / 2 - $dot-size / 2;
+        }
+        100% {
+            top: 1.9rem;
+            left: $circle-size / 2 - $dot-size / 2;
+        }
+    }
+
+    @keyframes dot-3 {
+        0% {
+            top: 2.25rem;
+            left: $circle-size / 2 - $dot-size / 2 + 6px;
+        }
+        50% {
+            top: 2.25rem;
+            left: $circle-size / 2 - $dot-size / 2;
+        }
+        100% {
+            top:2.6rem;
+            left: $circle-size / 2 - $dot-size / 2;
+        }
+    }
     // header
     header {
         display: grid;
@@ -288,20 +318,6 @@ header {
                     top: 2.25rem;
                     left: $circle-size / 2 - $dot-size / 2 - 6px;
                 }
-                @keyframes dot-1 {
-                    0% {
-                        top: 2.25rem;
-                        left: $circle-size / 2 - $dot-size / 2 - 6px;
-                    }
-                    50% {
-                        top: 2.25rem;
-                        left: $circle-size / 2 - $dot-size / 2;
-                    }
-                    100% {
-                        top: 1.9rem;
-                        left: $circle-size / 2 - $dot-size / 2;
-                    }
-                }
                 > span:nth-child(2) {
                     top: 2.25rem;
                     left: $circle-size / 2 - $dot-size / 2;
@@ -309,20 +325,6 @@ header {
                 > span:nth-child(3) {
                     top:2.25rem;
                     left: $circle-size / 2 - $dot-size / 2 + 6px;
-                }
-                @keyframes dot-3 {
-                    0% {
-                        top: 2.25rem;
-                        left: $circle-size / 2 - $dot-size / 2 + 6px;
-                    }
-                    50% {
-                        top: 2.25rem;
-                        left: $circle-size / 2 - $dot-size / 2;
-                    }
-                    100% {
-                        top:2.6rem;
-                        left: $circle-size / 2 - $dot-size / 2;
-                    }
                 }
             }
         }
@@ -340,6 +342,24 @@ header {
                     animation: dot-3 .6s linear 0 normal forwards;
                 }
             }
+        }
+    }
+}
+@media only screen and (max-device-width: 382px) {
+    // sizes
+    $toggle-width: 40vw;
+    // menu list
+    header {
+        .nav {
+            width: $toggle-width;
+        }
+        // main navigation
+        #toggle-main + label #nav-main {
+           left: -$toggle-width;
+        }
+        // sub navigation
+        #toggle-sub  + label #nav-sub {
+            right: -$toggle-width;
         }
     }
 }
