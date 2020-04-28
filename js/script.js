@@ -1,20 +1,12 @@
 "use strict"
-
-
-
-
-
-
-
-
-
 /* ********************************************************************* HEADER ********************************************************************** */
 async function getHeader() {
-    let response = await fetch('./temp/header.html')
+    let response = await fetch('/temp/header.html')
     if(response.ok) {
         let data = await response.text()
         let header = document.querySelector('header')
         header.innerHTML = data
+<<<<<<< HEAD
         if (
             "IntersectionObserver" in window &&
             "IntersectionObserverEntry" in window &&
@@ -33,21 +25,23 @@ async function getHeader() {
         }
           
           
+=======
+        /*
+        let sportswear = document.querySelector('[name="sportswear"]')
+        sportswear.addEventListener('click', e => {
+            console.log(e);
+        getSportswear(e)    
+        })
+        let shoes = document.querySelector('[name="shoes"]')
+        shoes.addEventListener('click', e => {
+            console.log(e);
+        getSportswear(e)  
+        })
+        */
+>>>>>>> 76d3867be534b3540ef5347888c7a69252407837
     } else {
         console.log('Connect Error');
     }
-
 }
 
 getHeader()
-// function loadEventListeners(){
-//             sportswear.addEventListener('click', function (e){
-//                 console.log('helo')
-//             })
-                
-    
-    
-// }
-
-
- 

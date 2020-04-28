@@ -170,6 +170,62 @@ header #nav-sub > li > a {
 
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
+  @-webkit-keyframes dot-1 {
+    0% {
+      top: 2.25rem;
+      left: 9px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 1.9rem;
+      left: 15px;
+    }
+  }
+  @keyframes dot-1 {
+    0% {
+      top: 2.25rem;
+      left: 9px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 1.9rem;
+      left: 15px;
+    }
+  }
+  @-webkit-keyframes dot-3 {
+    0% {
+      top: 2.25rem;
+      left: 21px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 2.6rem;
+      left: 15px;
+    }
+  }
+  @keyframes dot-3 {
+    0% {
+      top: 2.25rem;
+      left: 21px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 2.6rem;
+      left: 15px;
+    }
+  }
   header {
     display: -ms-grid;
     display: grid;
@@ -328,34 +384,6 @@ header #nav-sub > li > a {
     top: 2.25rem;
     left: 9px;
   }
-  @-webkit-keyframes dot-1 {
-    0% {
-      top: 2.25rem;
-      left: 9px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 1.9rem;
-      left: 15px;
-    }
-  }
-  @keyframes dot-1 {
-    0% {
-      top: 2.25rem;
-      left: 9px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 1.9rem;
-      left: 15px;
-    }
-  }
   header #toggle-sub + label > div:last-child > span:nth-child(2) {
     top: 2.25rem;
     left: 15px;
@@ -363,34 +391,6 @@ header #nav-sub > li > a {
   header #toggle-sub + label > div:last-child > span:nth-child(3) {
     top: 2.25rem;
     left: 21px;
-  }
-  @-webkit-keyframes dot-3 {
-    0% {
-      top: 2.25rem;
-      left: 21px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 2.6rem;
-      left: 15px;
-    }
-  }
-  @keyframes dot-3 {
-    0% {
-      top: 2.25rem;
-      left: 21px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 2.6rem;
-      left: 15px;
-    }
   }
   header #toggle-sub:checked + label #nav-sub {
     right: 0;
@@ -404,6 +404,18 @@ header #nav-sub > li > a {
   header #toggle-sub:checked + label > div:last-child > span:nth-child(3) {
     -webkit-animation: dot-3 .6s linear 0 normal forwards;
             animation: dot-3 .6s linear 0 normal forwards;
+  }
+}
+
+@media only screen and (max-device-width: 382px) {
+  header .nav {
+    width: 40vw;
+  }
+  header #toggle-main + label #nav-main {
+    left: -40vw;
+  }
+  header #toggle-sub + label #nav-sub {
+    right: -40vw;
   }
 }
 
@@ -421,6 +433,10 @@ main {
           justify-content: space-between;
 }
 
+main #category {
+  display: none;
+}
+
 main > div {
   display: -ms-grid;
   display: grid;
@@ -431,7 +447,7 @@ main > div {
       grid-template-areas: "img img img img"  "cat cat cat cat" "name name name name" "price .  . btn-buy";
 }
 
-main > div > div {
+main > div > a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -444,7 +460,7 @@ main > div > div {
   transition: all .1s ease-in;
 }
 
-main > div > div:hover {
+main > div > a:hover {
   position: relative;
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
@@ -503,6 +519,11 @@ main > div > button {
   margin-top: .5rem;
 }
 
+/* ******************************************************************* PRODUCT ******************************************************************* */
+#product-json {
+  display: none;
+}
+
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
   main {
@@ -513,12 +534,12 @@ main > div > button {
     -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
   }
-  main > div > div {
+  main > div > a {
     width: 90vw;
     height: 60vw;
     background-size: 90vw;
   }
-  main > div > div:hover {
+  main > div > a:hover {
     position: static;
     -webkit-transform: none;
             transform: none;
