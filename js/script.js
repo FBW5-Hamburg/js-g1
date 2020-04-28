@@ -15,16 +15,24 @@ async function getHeader() {
         let data = await response.text()
         let header = document.querySelector('header')
         header.innerHTML = data
-        let sportswear = document.querySelector('[name="sportswear"]')
-        sportswear.addEventListener('click', e => {
-            console.log(e);
-        getSportswear(e)    
-        })
-        let shoes = document.querySelector('[name="shoes"]')
-        shoes.addEventListener('click', e => {
-            console.log(e);
-        getSportswear(e)    
-        })
+        if (
+            "IntersectionObserver" in window &&
+            "IntersectionObserverEntry" in window &&
+            "intersectionRatio" in window.IntersectionObserverEntry.prototype
+          ) {
+                let observer = new IntersectionObserver(entries => {
+                    if (entries[0].boundingClientRect.y < 0) {
+                        document.body.classList.add("header-not-at-top");
+                    } else {
+                        document.body.classList.remove("header-not-at-top");
+                    }
+                });
+                console.log(observer);
+                
+                observer.observe(document.querySelector("#top-of-site-pixel-anchor"));
+        }
+          
+          
     } else {
         console.log('Connect Error');
     }
