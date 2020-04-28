@@ -68,7 +68,7 @@ window.onload = () => {
             container.append(productName)
             // price
             let productPrice = document.createElement('span')
-            productPrice.innerText = products[i].price + " €"
+            productPrice.innerText = "€ " + products[i].price 
             container.append(productPrice)   
             //label for amount
             let productAmountLabel = document.createElement('label')

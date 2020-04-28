@@ -59,12 +59,15 @@ window.onload = () => {
     let tHeader3 = document.createElement('th')
     HeaderrowElem.appendChild(tHeader3)     
     tHeader3.innerText = "Amount"
-
-   
-
+    
+    
     let tHeader4 = document.createElement('th')
     HeaderrowElem.appendChild(tHeader4)     
-    tHeader4.innerText = "Price"
+    tHeader4.innerText = ""
+    
+    let tHeader5 = document.createElement('th')
+    HeaderrowElem.appendChild(tHeader5)     
+    tHeader5.innerText = "Price"
    
 
 
@@ -100,7 +103,32 @@ window.onload = () => {
             productAmount.style.border = "1px solid black"
             console.log(productAmount)
 
+            //delete
+            let deleteProduct = document.createElement('td')
+            deleteProduct.style.border = "1px solid black"
+            rowElem.appendChild(deleteProduct)
+            
+            let deleteBtn = document.createElement('button')
+            deleteBtn.innerText = 'delete'
+            deleteProduct.appendChild(deleteBtn)
+            let deletedItem = convertedArr[i]
 
+            
+            
+            deleteBtn.addEventListener('click', e => {
+                console.log(deletedItem)
+                let index = convertedArr.indexOf(deletedItem)
+                convertedArr.splice(index, i)
+                
+            //convert object to json
+            let cartArrayJson = JSON.stringify(convertedArr)
+
+            // save items in the local storage
+            localStorage.setItem('cartlist',cartArrayJson)
+            });
+        
+          
+        
 
             // price
             let productPrice = document.createElement('td')

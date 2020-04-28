@@ -71,7 +71,7 @@ window.onload = () => {
 
         
 
-        // image
+        // ima<script src="./js/script.js"></script>ge
         let productIMG = document.createElement('div')
         productIMG.style.backgroundImage = "url(" + products[i].imgSmall + ")"
         container.append(productIMG)
@@ -133,6 +133,7 @@ window.onload = () => {
 
             // checking all products Array saved in the local storage
             //console.log(cartArrayJson);
+            document.querySelector('main').append(container)
             
             });
         
