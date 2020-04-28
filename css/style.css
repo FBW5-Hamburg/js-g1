@@ -414,6 +414,10 @@ main {
           justify-content: space-between;
 }
 
+main #category {
+  display: none;
+}
+
 main > div {
   display: -ms-grid;
   display: grid;
@@ -424,7 +428,7 @@ main > div {
       grid-template-areas: "img img img img"  "cat cat cat cat" "name name name name" "price .  . btn-buy";
 }
 
-main > div > div {
+main > div > a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -437,7 +441,7 @@ main > div > div {
   transition: all .1s ease-in;
 }
 
-main > div > div:hover {
+main > div > a:hover {
   position: relative;
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
@@ -496,6 +500,11 @@ main > div > button {
   margin-top: .5rem;
 }
 
+/* ******************************************************************* PRODUCT ******************************************************************* */
+#product-json {
+  display: none;
+}
+
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
   main {
@@ -506,12 +515,12 @@ main > div > button {
     -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
   }
-  main > div > div {
+  main > div > a {
     width: 90vw;
     height: 60vw;
     background-size: 90vw;
   }
-  main > div > div:hover {
+  main > div > a:hover {
     position: static;
     -webkit-transform: none;
             transform: none;
