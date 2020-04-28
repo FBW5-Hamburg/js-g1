@@ -17,6 +17,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    // category
+    #category {
+        display: none;
+    }
     // products
     > div {
         display: grid;
@@ -29,7 +33,7 @@ main {
             "price .  . btn-buy"
         ;
         // image
-        > div {
+        > a {
             grid-area: img;
             width: $bg-img-size;
             height: $bg-img-height;
@@ -38,7 +42,7 @@ main {
             transition: all .1s ease-in;
         }
         // zoom
-        > div:hover {
+        > a:hover {
             position: relative;
             transform: scale(1.6);
             background-position: center;
@@ -82,6 +86,10 @@ main {
         }
     }
 }
+/* ******************************************************************* PRODUCT ******************************************************************* */
+#product-json {
+    display: none;
+}
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
     $main-top: 4rem;
@@ -95,13 +103,13 @@ main {
         > div {
             grid-template-columns: auto auto auto auto;
             // image
-            > div {
+            > a {
                 width: 90vw;
                 height: 60vw;
                 background-size: 90vw;
             }
             // remove zoom
-            > div:hover {
+            > a:hover {
                 position: static;
                 transform: none;
             }

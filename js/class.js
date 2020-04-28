@@ -12,6 +12,9 @@ class product {
 brutto(){
     return Math.round(this.productPrice*(1+this.tax/100)) 
 
-}
+
+    }
+    
+ 
 
 }
