@@ -3,6 +3,7 @@ function getProducts(data) {
     return new Promise((resolve, reject) => {
         let xhr = new XMLHttpRequest()
         xhr.open('GET', data)
+
         xhr.send()
         xhr.onload = () => {          
             if(xhr.status == 200){
@@ -15,7 +16,6 @@ function getProducts(data) {
 }
 
 window.onload = () => {
-
     //define local stroage Array
     let cartArray =[] 
     //find existing cartlist
@@ -88,11 +88,14 @@ window.onload = () => {
 
            // checking all products Array saved in the local storage
            //console.log(cartArrayJson);
-           
-
+       
             });
         
           
-        }  
+        } 
+    })
+} 
+    }).catch(error => {
+        console.log(error)
     })
 } 

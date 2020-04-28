@@ -1,13 +1,4 @@
 "use strict"
-
-
-
-
-
-
-
-
-
 /* ********************************************************************* HEADER ********************************************************************** */
 async function getHeader() {
     let response = await fetch('./temp/header.html')
@@ -17,24 +8,19 @@ async function getHeader() {
         header.innerHTML = data
         let sportswear = document.querySelector('[name="sportswear"]')
         sportswear.addEventListener('click', e => {
-            console.log(e);    
+            console.log(e);
+        getSportswear(e)    
         })
-        getSportswear()
+        let shoes = document.querySelector('[name="shoes"]')
+        shoes.addEventListener('click', e => {
+            console.log(e);
+        getSportswear(e)  
     } else {
         console.log('Connect Error');
     }
 }
 
 getHeader()
-
-
-
-function getSportswear() {
-    let sportswear = document.querySelector('[name="sportswear"]')
-    sportswear.addEventListener('click', e => {
-        console.log(e);   
-    })
-}
 
 /* ******************************************************************** PRODUCTS ******************************************************************** */
 function getProducts() {
@@ -50,6 +36,7 @@ function getProducts() {
             }
         }
     })
+
 }
 
 window.onload = () => {
