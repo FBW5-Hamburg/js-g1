@@ -18,7 +18,12 @@ async function getHeader() {
         let sportswear = document.querySelector('[name="sportswear"]')
         sportswear.addEventListener('click', e => {
             console.log(e);
-        getSportswear()    
+        getSportswear(e)    
+        })
+        let shoes = document.querySelector('[name="shoes"]')
+        shoes.addEventListener('click', e => {
+            console.log(e);
+        getSportswear(e)    
         })
     } else {
         console.log('Connect Error');
@@ -27,23 +32,14 @@ async function getHeader() {
 }
 
 getHeader()
-
-
-
-function getSportswear() {
-    let sportswear = document.querySelector('[name="sportswear"]')
-    sportswear.addEventListener('click', e => {
-        console.log(e);
-    getSportswear()    
-    })
-}
-
-function loadEventListeners(){
-            sportswear.addEventListener('click', function (e){
-                console.log('helo')
-            })
+// function loadEventListeners(){
+//             sportswear.addEventListener('click', function (e){
+//                 console.log('helo')
+//             })
                 
     
     
-}
+// }
 
+
+ 
