@@ -1,6 +1,6 @@
 "use strict"
 /* ******************************************************************** PRODUCTS ******************************************************************** */
-window.onload = () => {
+function createCart() {
 
     //define local stroage Array
     let cartArray =[] 
@@ -118,3 +118,4 @@ window.onload = () => {
         
     })
 }
+export {createCart}

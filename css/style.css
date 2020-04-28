@@ -151,6 +151,62 @@ header #nav-sub > li > a {
 
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
+  @-webkit-keyframes dot-1 {
+    0% {
+      top: 2.25rem;
+      left: 9px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 1.9rem;
+      left: 15px;
+    }
+  }
+  @keyframes dot-1 {
+    0% {
+      top: 2.25rem;
+      left: 9px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 1.9rem;
+      left: 15px;
+    }
+  }
+  @-webkit-keyframes dot-3 {
+    0% {
+      top: 2.25rem;
+      left: 21px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 2.6rem;
+      left: 15px;
+    }
+  }
+  @keyframes dot-3 {
+    0% {
+      top: 2.25rem;
+      left: 21px;
+    }
+    50% {
+      top: 2.25rem;
+      left: 15px;
+    }
+    100% {
+      top: 2.6rem;
+      left: 15px;
+    }
+  }
   header {
     display: -ms-grid;
     display: grid;
@@ -309,34 +365,6 @@ header #nav-sub > li > a {
     top: 2.25rem;
     left: 9px;
   }
-  @-webkit-keyframes dot-1 {
-    0% {
-      top: 2.25rem;
-      left: 9px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 1.9rem;
-      left: 15px;
-    }
-  }
-  @keyframes dot-1 {
-    0% {
-      top: 2.25rem;
-      left: 9px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 1.9rem;
-      left: 15px;
-    }
-  }
   header #toggle-sub + label > div:last-child > span:nth-child(2) {
     top: 2.25rem;
     left: 15px;
@@ -344,34 +372,6 @@ header #nav-sub > li > a {
   header #toggle-sub + label > div:last-child > span:nth-child(3) {
     top: 2.25rem;
     left: 21px;
-  }
-  @-webkit-keyframes dot-3 {
-    0% {
-      top: 2.25rem;
-      left: 21px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 2.6rem;
-      left: 15px;
-    }
-  }
-  @keyframes dot-3 {
-    0% {
-      top: 2.25rem;
-      left: 21px;
-    }
-    50% {
-      top: 2.25rem;
-      left: 15px;
-    }
-    100% {
-      top: 2.6rem;
-      left: 15px;
-    }
   }
   header #toggle-sub:checked + label #nav-sub {
     right: 0;
@@ -385,6 +385,18 @@ header #nav-sub > li > a {
   header #toggle-sub:checked + label > div:last-child > span:nth-child(3) {
     -webkit-animation: dot-3 .6s linear 0 normal forwards;
             animation: dot-3 .6s linear 0 normal forwards;
+  }
+}
+
+@media only screen and (max-device-width: 382px) {
+  header .nav {
+    width: 40vw;
+  }
+  header #toggle-main + label #nav-main {
+    left: -40vw;
+  }
+  header #toggle-sub + label #nav-sub {
+    right: -40vw;
   }
 }
 
