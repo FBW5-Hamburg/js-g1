@@ -60,6 +60,7 @@ window.onload = () => {
                 let productIMG = document.createElement('a')
                 productIMG.href = products[i].url
                 productIMG.style.backgroundImage = `url(${products[i].imgSmall})`
+                productIMG.name = products[i].name
                 container.append(productIMG)
                 // category
                 let productCategory = document.createElement('h2')
