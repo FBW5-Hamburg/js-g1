@@ -219,6 +219,26 @@
 			"name": "ZX TORSION SCHUH",
 			"price": 104.95,
 			"specification": "In den 80ern revolutionierte der ZX Laufschuh, der auf den Erkenntnissen der Biomechanik basierte, mit seinem High-Tech-Design die Laufwelt. Bei dieser Streetwear-Version trifft Nostalgie-Feeling auf moderne Innovation, indem wir Vintage-Vibes und neue Materialien miteinander kombinieren. Sie ist aus ballistischem Nylon mit Wildleder-Overlays und hat eine reaktionsfreudige Boost Dämpfung, während der X-förmige Torsion Bar für ein Plus an Stabilität sorgt. Abgerundet wird der Look durch reflektierende Details."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "",
+			"imgLarge": "./img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.jpg",
+			"name": "Campus ADV Schuh Gelb EF8474 01 standard",
+			"price": 85.95,
+			"specification": "Genau wie deine Playlist mit Lieblingssongs aus den 80ern, greift auch dieser Schuh das Beste aus dieser Zeit wieder auf. Inspiriert vom original Campus bekommt dieser Sneaker ein modernes Update mit einer leichten Dämpfung und einer flexiblen Außensohle mit Profil."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "",
+			"imgLarge": "./img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.jpg",
+			"name": "Continental 80 Baara Schuh Schwarz EF677001standard",
+			"price": 72.99,
+			"specification": ""
 		}
 
     ]       
