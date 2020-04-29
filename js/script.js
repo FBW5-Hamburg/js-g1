@@ -4,7 +4,7 @@ async function getHeader() {
     let response = await fetch('/temp/header.html')
     if(response.ok) {
         let data = await response.text()
-        let header = document.querySelector('header')
+         let header = document.querySelector('header')
         header.innerHTML = data
         /*
         let sportswear = document.querySelector('[name="sportswear"]')
@@ -18,8 +18,7 @@ async function getHeader() {
         getSportswear(e)  
         })
         */
-        window.onscroll = function() {scrollFunction()};
-        scrollFunction()
+       document.querySelector('body').onscroll = function(e) {scrollFunction(header)};
     } else {
         console.log('Connect Error');
     }
@@ -27,12 +26,18 @@ async function getHeader() {
     
 }
 
-getHeader()
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.top = "-50px";
+getHeader()
+let scrollTop = 0
+function scrollFunction(header) {
+    //console.log(window.pageYOffset);
+    
+    if (window.pageYOffset - scrollTop >= 0 ) {
+        header.style.position = "relative";
+      
     } else {
-      document.getElementById("navbar").style.top = "0";
+        
+      header.style.position = "fixed";
     }
+    scrollTop = window.pageYOffset
   }
