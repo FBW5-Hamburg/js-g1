@@ -4,7 +4,7 @@ $main-top: $header-height + 1rem;
 // sizes
 $bg-img-size: 12rem;
 $bg-img-height: 8rem;
-$bg-img-position: 50% 30%;
+$bg-img-position: 50% 40%;
 $category-size: .8rem;
 $name-size: .8rem;
 $price-size: .6rem;
@@ -165,12 +165,18 @@ main {
             cursor: pointer;
             background-color: $main-color;
             border: 1px solid $txt-color;
+            transition: border-color .1s;
             border-radius: .2rem;
             font-size: .8rem;            // $price-size
             color: inherit;
             padding: .15rem;
             justify-self: stretch;
             align-self: end;
+        }
+        > button:checked {
+            border-color: orange;
+            transform: scale(1.2);
+            transition: scale 1s ease-in;
         }
     }
 }

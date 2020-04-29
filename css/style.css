@@ -30,13 +30,6 @@ body {
 
 /* ******************************************************************* IMPORT ******************************************************************* */
 /* ******************************************************************* HEADER ******************************************************************* */
-html {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: white;
-  letter-spacing: .03rem;
-}
-
 body {
   background-color: #0a898d;
 }
@@ -151,8 +144,13 @@ header #nav-sub {
           justify-content: space-between;
 }
 
-header #nav-sub > li:first-child {
+header #nav-sub > li:nth-child(1) {
   margin-right: 3vw;
+}
+
+header #nav-sub > li:nth-child(2) {
+  margin-right: 3vw;
+  display: none;
 }
 
 header #nav-sub > li > a {
@@ -262,6 +260,9 @@ header #nav-sub > li > a {
   }
   header #toggle-main + label #nav-main > li:first-child {
     margin-top: 6rem;
+  }
+  header #toggle-main + label #nav-main > li:first-child > ul {
+    position: static;
   }
   header #toggle-main + label > div:last-child {
     display: block;
@@ -446,7 +447,7 @@ main > div > a {
   width: 12rem;
   height: 8rem;
   background-size: 12rem;
-  background-position: 50% 30%;
+  background-position: 50% 40%;
   -webkit-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
@@ -534,7 +535,7 @@ main > article > div {
   width: 56vw;
   height: 32vw;
   background-size: 56vw;
-  background-position: 50% 30%;
+  background-position: 50% 40%;
   margin-right: 2rem;
 }
 
@@ -627,6 +628,8 @@ main > article > button {
   cursor: pointer;
   background-color: #0a898d;
   border: 1px solid white;
+  -webkit-transition: border-color .1s;
+  transition: border-color .1s;
   border-radius: .2rem;
   font-size: .8rem;
   color: inherit;
@@ -636,6 +639,14 @@ main > article > button {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+main > article > button:checked {
+  border-color: orange;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: scale 1s ease-in;
+  transition: scale 1s ease-in;
 }
 
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
@@ -673,5 +684,17 @@ main > article > button {
     padding: .2rem;
     margin-top: .5rem;
   }
+}
+
+/* ******************************************************************* CART ******************************************************************* */
+table {
+  width: 100vw;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+table th, table td {
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
