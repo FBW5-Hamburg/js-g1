@@ -104,16 +104,7 @@ window.onload = () => {
                 // price
                 let productPrice = document.createElement('span')
                 productPrice.innerText = products[i].price + " €"
-                container.append(productPrice)   
-                //label for amount
-                let productAmountLabel = document.createElement('label')
-                productAmountLabel.innerHTML = "Amount"
-                container.append(productAmountLabel)
-                //input for amount
-                let productAmount = document.createElement('input')
-                productAmount.setAttribute("type", "number")
-                productAmount.value = "1"
-                container.append(productAmount)    
+                container.append(productPrice)
                 // btn buy
                 let btnBuy = document.createElement('button')
                 btnBuy.innerText = "Buy"

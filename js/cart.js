@@ -1,5 +1,4 @@
 "use strict"
-
 /* ************************** CART ************************ */
 window.onload = () => {
 
@@ -138,4 +137,4 @@ window.onload = () => {
 }
     //let jsonObjFinal = localStorage.getItem('cartlist')
         
-    };
+};
