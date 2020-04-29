@@ -1,0 +1,12 @@
+/* ******************************************************************* CART ******************************************************************* */
+table {
+  width: 100vw;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+table th, table td {
+  border: none;
+}
+/*# sourceMappingURL=cart.css.map */

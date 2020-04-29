@@ -1,11 +1,13 @@
 /* ****************************************************************** SETTINGS ****************************************************************** */
+// font
+$font: Helvetica, Arial, sans-serif;
 // colours
 $main-color: #0a898d;
 $txt-color: white;
 // distances
 $screen-border-size: 5vw;
 // sizes
-$font: 16px;
+$font-size: 16px;
 /* ******************************************************************* INDEX ******************************************************************* */
 * {
     margin: 0;
@@ -14,8 +16,8 @@ $font: 16px;
 }
 // font
 html {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: $font;
+    font-family: $font;
+    font-size: $font-size;
     color: $txt-color;
     letter-spacing: .03rem;
 }
@@ -34,3 +36,4 @@ body {
 /* ******************************************************************* IMPORT ******************************************************************* */
 @import 'header';
 @import 'products';
+@import 'cart';
