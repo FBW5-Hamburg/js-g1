@@ -1,120 +1,143 @@
 "use strict"
-/* ******************************************************************** PRODUCTS ******************************************************************** */
-function createCart() {
+/* ************************** CART ************************ */
+window.onload = () => {
 
     //define local stroage Array
     let cartArray =[] 
     //find existing cartlist
     let jsonObj= localStorage.getItem('cartlist')
-        if(jsonObj != null){
-            //convert json to js object
-            let convertedArr= this.JSON.parse(jsonObj)
-            //add existing cartlist items to cartArray 
-            convertedArr.forEach(element =>{
-             cartArray.push(element)   
-            });
+    //convert json to js object
+    let convertedArr = this.JSON.parse(jsonObj)
+    
 
-            // checking number of products saved in the local storage
-                console.log(cartArray.length);
-            
+    if (convertedArr.length == 0) {
+        let EmptyHeader = document.createElement('h2')
+        EmptyHeader.innerText = "The Cart is Empty"
+        document.querySelector('main').append(EmptyHeader)
+    } 
+    
+    else {
+        
+        let tableElem = document.createElement('table');
+        tableElem.style.border = "1px solid black"
 
-        }
-  // checking all products Array saved in the local storage
+        let HeaderrowElem = document.createElement('tr')
+        tableElem.appendChild(HeaderrowElem)
 
-    console.log(cartArray);
+        let tHeader1 = document.createElement('th')
+        HeaderrowElem.appendChild(tHeader1)     
+        tHeader1.innerText = "Article"
 
-    getProducts().then(response => {
-        for(let i = 0; i < response.length; i++) {
-        let container = document.createElement('div')
-        let products = JSON.parse(response).arrProducts
+        let tHeader2 = document.createElement('th')
+        HeaderrowElem.appendChild(tHeader2)     
+        tHeader2.innerText = "Name"
+
+        
+        let tHeader3 = document.createElement('th')
+        HeaderrowElem.appendChild(tHeader3)     
+        tHeader3.innerText = "Amount"
+        
+        
+        let tHeader4 = document.createElement('th')
+        HeaderrowElem.appendChild(tHeader4)     
+        tHeader4.innerText = ""
+        
+        let tHeader5 = document.createElement('th')
+        HeaderrowElem.appendChild(tHeader5)     
+        tHeader5.innerText = "Price"
+    
+
+
+        let a = convertedArr.length;
+        let sumPrice = 0
+
+            for (var i = a-1; i >= 0; i--) {
+
+                let rowElem = document.createElement('tr')
+
+                console.log(convertedArr[i])
+
+                let col_1 = document.createElement('td')
+
+                col_1.style.border = "1px solid black"
+
+                let productIMG = document.createElement('img')
+                productIMG.src = convertedArr[i].productIMG
+                col_1.appendChild(productIMG)
+                console.log(col_1);
+                rowElem.appendChild(col_1)
+
+                // name
+                let productName = document.createElement('td')
+                productName.innerText = convertedArr[i].productName
+                rowElem.appendChild(productName)
+                productName.style.border = "1px solid black"
+
+                //amount
+                let productAmount = document.createElement('td')
+                productAmount.innerText = convertedArr[i].amount
+                rowElem.appendChild(productAmount)
+                productAmount.style.border = "1px solid black"
+                console.log(productAmount)
+
+                //delete
+                let deleteProduct = document.createElement('td')
+                deleteProduct.style.border = "1px solid black"
+                rowElem.appendChild(deleteProduct)
+                
+                let deleteBtn = document.createElement('button')
+                deleteBtn.innerText = 'delete'
+                deleteProduct.appendChild(deleteBtn)
+                
+                let deletedItem = convertedArr[i]
+
+                
+
+                
+                
+                deleteBtn.addEventListener('click', e => {
+                    //console.log(deletedItem)
+                    let index = convertedArr.indexOf(deletedItem)
+                    console.log(index)
+                    
+                    convertedArr.splice(index, 1)
+
+                    console.log(convertedArr);
+
+                    // save items in the local storage
+                    localStorage.setItem('cartlist', JSON.stringify(convertedArr))
+                    location.reload();
+                });
+
+                // price
+                let productPrice = document.createElement('td')
+                productPrice.innerText = convertedArr[i].productPrice + " €"
+                rowElem.appendChild(productPrice)
+
+                sumPrice = parseFloat(sumPrice )+ parseFloat(convertedArr[i].productPrice)
+
+                productPrice.style.border = "1px solid black"
+
+                tableElem.appendChild(rowElem)
+            }
 
         
 
-        // image
-        let productIMG = document.createElement('div')
-        productIMG.style.backgroundImage = "url(" + products[i].imgSmall + ")"
-        container.append(productIMG)
-        // category
-        let productCategory = document.createElement('h2')
-        productCategory.innerText = products[i].category
-        container.append(productCategory)
-        // name
-        let productName = document.createElement('h3')
-        productName.innerText = products[i].name
-        container.append(productName)
-        // price
-        let productPrice = document.createElement('span')
-        productPrice.innerText = products[i].price + " €"
-        container.append(productPrice)
-        
-        //quantity
-        
-        //label for amount
-        let productAmountLabel = document.createElement('label')
-        productAmountLabel.innerHTML = "Amount"
-        container.append(productAmountLabel)
+            document.body.appendChild(tableElem)
 
-        //input for amount
-        let productAmount = document.createElement('input')
-        productAmount.style.type = "number"
-        container.append(productAmount)
-        
-        
-        // btn buy
-        let btnBuy = document.createElement('button')
-        btnBuy.innerText = "Buy"
-        container.append(btnBuy)
-     
-        document.querySelector('main').append(container)
-       
-        btnBuy.addEventListener('click', e => {
-            //
-            window.location.href = "/cart.html";
-            // create product object
-          let buyProduct = new product(products[i].name, "url(" + products[i].imgSmall + ")","",products[i].price,products[i].category,"","0.19")
-            console.log(buyProduct);
-            //add new item to the cartArray
-           cartArray.push(buyProduct)
+            let totalrowElem = document.createElement('tr')
+            tableElem.appendChild(totalrowElem)
 
+            let totalPriceTEXT = document.createElement('td')
+            totalPriceTEXT.innerText = 'Total Amount:'
+            totalrowElem.appendChild(totalPriceTEXT)
 
-           //convert object to json
-            let cartArrayJson = JSON.stringify(cartArray)
-            // save items in the local storage
-            localStorage.setItem('cartlist',cartArrayJson)
-            // checking all products Array saved in the local storage
-            console.log(cartArrayJson);
-            //var oldDiv = document.getElementsByTagName("DIV")[0];
-            //let oldDiv = document.getElementById("div");
-            //oldDiv.remove();
+            let totalPrice = document.createElement('td')
+            totalPrice.innerText = sumPrice.toFixed(2)
+            totalrowElem.appendChild(totalPrice)
 
-            });
-        
-          
-        }
-        
-        
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }).catch(error => {
-        console.log(error);
-        
-    })
+        document.querySelector('main').append(tableElem)
 }
+    //let jsonObjFinal = localStorage.getItem('cartlist')
+        
+};

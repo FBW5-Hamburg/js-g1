@@ -464,7 +464,7 @@ main > div > a:hover {
 main > div > h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: cat;
   -ms-flex-item-align: end;
       align-self: end;
@@ -475,7 +475,7 @@ main > div > h2 {
 main > div > h3 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: name;
   -ms-flex-item-align: end;
       align-self: end;
@@ -484,7 +484,8 @@ main > div > h3 {
 }
 
 main > div > span {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: price;
   -ms-flex-item-align: end;
@@ -494,7 +495,7 @@ main > div > span {
 
 main > div > button {
   -ms-grid-row: 5;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: btn-buy;
   cursor: pointer;
   width: 2rem;
@@ -515,11 +516,14 @@ main > div > button {
 main > article {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto 2.5rem;
+      grid-template-columns: auto auto auto 2.5rem;
   -ms-grid-rows: auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto;
-      grid-template-areas: "img cat cat"  "img name name" "img spec spec" "img label amount" "img price btn-buy";
+      grid-template-areas: "img cat cat cat"  "img name name name" "img spec spec spec" "img price label amount" "img price . btn-buy";
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 main > article > div {
@@ -537,50 +541,49 @@ main > article > div {
 main > article > h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: cat;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
   font-size: 1rem;
   font-weight: lighter;
+  margin-bottom: .5rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 main > article > h3 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: name;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
   font-size: 20;
   margin-bottom: .5rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 main > article > section {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: spec;
   font-size: .8rem;
+  margin-bottom: 1rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
-main > article > label {
+main > article section + span {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  grid-area: label;
-  font-size: .8rem;
-}
-
-main > article > input {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  grid-area: amount;
-}
-
-main > article > span {
-  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: price;
   -ms-flex-item-align: end;
@@ -589,19 +592,50 @@ main > article > span {
   font-size: .8rem;
 }
 
+main > article > label {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: label;
+  font-size: .8rem;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding-right: 1rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+main > article > input {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: amount;
+  height: 1.2rem;
+  text-align: right;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+main > article input::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
 main > article > button {
   -ms-grid-row: 5;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: btn-buy;
   cursor: pointer;
-  width: 2rem;
   background-color: #0a898d;
   border: 1px solid white;
   border-radius: .2rem;
   font-size: .8rem;
   color: inherit;
   padding: .15rem;
-  margin-top: .5rem;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */

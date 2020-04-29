@@ -1,7 +1,7 @@
 {
 	"arrProducts": [
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "/shoes/superstar.html",
 			"imgSmall": "/img/Superstar_Schuh_klein.png",
 			"imgLarge": "/img/Superstar_Schuh_gross.jpg",
@@ -10,7 +10,7 @@
 			"specification": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
 		},	
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "/shoes/samba.html",
 			"imgSmall": "/img/Samba_Schuh_klein.png",
 			"imgLarge": "/img/Samba_Schuh_gross.jpg",
@@ -19,7 +19,7 @@
 			"specification": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "/shoes/NMD_R1.html",
 			"imgSmall": " ",
 			"imgLarge": "/img/NMD_R1 Schuh.jpg",
@@ -28,7 +28,7 @@
 			"specification": "High-tech design meets archive attitude. These NMD_R1 Shoes combine the best of adidas' latest technical innovations with the look of '80s racing styles. The colour-fading midsole features a big plug detail. Soft, stretchy knit hugs the foot, and responsive cushioning gives a comfortable feel."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "/shoes/Falcon.html",
 			"imgSmall": " ",
 			"imgLarge": "./img/Falcon_Schuh.jpg",
@@ -37,7 +37,7 @@
 		    "specification": "Die bunten TPU-Details und das Finish im Metallic-Look stehen für den 90s-Look.Die dämpfende, leichte EVA-Zwischensohle und das atmungsaktive Mesh-Futter sorgen für angenehmen Tragekomfort."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "/shoes/OZWEEGO.html",
 			"imgSmall": " " ,
 			"imgLarge": "./img/OZWEEGO_Schuh.jpg",
@@ -46,7 +46,7 @@
 			"specification": "Dieser Schuh ist von den späten 90ern und frühen 2000ern inspiriert und liefert einen stylishen Mix aus Retro-Elementen und futuristischem Design. Sein Obermaterial kombiniert Mesh, Wildleder und glattes TPU. Außerdem bietet er im Vorfuß- und Fersenbereich gezielten Halt und Dämpfung für ein superbequemes Tragegefühl."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"imgSmall": " ",
 			"imgLarge": "./img/Stan_Smith_Schuh.jpg",
 			"name": "Stan Smith",
@@ -54,7 +54,7 @@
 			"specification": "Mit einem Klassiker machst du nie etwas verkehrt. Der Stan Smith räumt in Sachen Streetstyle ebenso ab wie einst sein Namensgeber auf dem Tennisplatz. Diese Version lässt den Look des Originals von 1971 mit einem minimalistischen Obermaterial aus Leder und einer cleanen Silhouette aufleben."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": " ",
 			"imgLarge": "./img/CONTINENTAL_80_Schuh.jpg",
@@ -63,7 +63,7 @@
 			"specification": "Rewind it back to the era of the aerobics class. The Continental 80 is an authentic bringback of an indoor sneaker from the '80s. These low top sneakers are made of smooth leather. They show off a swooping two-tone stripe on the side and a split rubber cupsole."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": " ",
 			"imgLarge": "./img/3MC_Schuh.jpg",
@@ -72,7 +72,7 @@
 			"specification": "Mit dem adidas 3MC holst du dir lässigen Skate-Style! Seine flexible Gummiaußensohle macht ihn ultrabequem, während der abriebfeste Zehenbereich für ein Plus an Strapazierfähigkeit beim Shredden sorgt."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"imgSmall": " ",
 			"imgLarge": "./img/Busenitz_Schuh.jpg",
 			"name": "Busenitz",
@@ -80,7 +80,7 @@
 			"specification": "Dieser Schuh aus der Zusammenarbeit mit Dennis Busenitz ist vom Copa Mundial Fußballschuh inspiriert und setzt auf Speed und technische Präzision. Er kommt mit einem Obermaterial aus weichem Wildleder und einem gepolsterten Schaft.."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": " ",
 			"imgLarge": "./img/Hamburg_Schuh.jpg",
@@ -90,7 +90,7 @@
 
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/DEERUPT_RUNNER_Schuh.jpg",
@@ -99,7 +99,7 @@
 			"specification": "Der Derrupt feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Samba_Schuh.jpg",
@@ -108,7 +108,7 @@
 			"specification": "Das adidas Primeknit Obermaterial verpasst dem funktionalen Style des Lucas Puig Signature-Schuhs überragenden Tragekomfort und Flexibilität. Der ultraleichte Schuh passt sich deinem Fuß perfekt an und garantiert so einen sicheren Sitz und Stabilität. Die niedrigprofilierte Gummiaußensohle sorgt dabei für optimale Boardkontrolle."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Campus_Schuh.jpg",
@@ -117,7 +117,7 @@
 			"specification": "Dieser cleane Court-Style-Sneaker ist der perfekte Begleiter für den Alltag. Er ist niedrig geschnitten und kommt mit seinem Obermaterial aus weichem Leder und den gezackten 3-Streifen ganz zeitlos daher. Die Gummi-Cupsohle rundet den Look ab. Für den adidas Signature-Style dürfen natürlich das Trefoil Logo auf der Zunge und dem Detail im Fersenbereich nicht fehlen."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Coast_Star_Schuh.jpg",
@@ -126,7 +126,7 @@
 		    "specification": "Der Coast feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.jpg",
@@ -135,7 +135,7 @@
 			"specification": "Mit dem progressiven, minimalistischen Design des ZX Flux stehen dir alle Möglichkeiten offen. Diese Version setzt ganz auf puristischen Style: sowohl Mesh-Obermaterial als auch die 3-Streifen, Fersenkappe und EVA-Zwischensohle haben die gleiche Farbe.Z"
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Aqua_Adilette_Schwarz_F35543_01_standard.jpg",
@@ -144,7 +144,7 @@
 			"specification": "Diese Adilette ist perfekt fürs Schwimmbad. Sie setzt auf stylishen Minimalismus, während die 3-Streifen für den adidas Signature-Style sorgen. Perfekt wird das Ganze durch die weiche Dämpfung, mit der es müde Füße nach dem Workout superbequem haben."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",			
 			"imgSmall": "",
 			"imgLarge": "./img/Gazelle_Schuh_Blau_BB5478_01_standard.jpg",
@@ -154,7 +154,7 @@
 		},
 		
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Cloudfoam_Adilette_Blau_B42211_01_standard.jpg",
@@ -163,7 +163,7 @@
 			"specification": "Diese Adilette ist der perfekte Begleiter am Pool oder in der Dusche. Sie hat ein schnell trocknendes Cloudfoam Fußbett für ein angenehm weiches, bequemes Tragegefühl. Der Synthetikriemen mit den kontrastierenden 3-Streifen steht außerdem für klassischen Sportstyle. Eine leichte EVA-Außensohle garantiert dabei zusätzlichen Komfort."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Adilette_Blau_G16220_01_standard.jpg",
@@ -173,7 +173,7 @@
 		},
 		
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/SL_80_Schuh.jpg",
@@ -182,7 +182,7 @@
 			"specification": "Zeit für ordentlich Oldschool-Style! Dieser adidas SL 80 ist von einer Laufschuh-Silhouette aus den 70ern inspiriert. Für echtes Retro-Feeling kommt er mit einem Obermaterial aus Nylon, während die dämpfende, bequeme Zwischensohle dafür sorgt, dass du auf jeden Fall noch deinen Zug erwischt."
 		},
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/SL_72_Schuh_Blau_EG6849_01_standard.jpg",
@@ -192,7 +192,7 @@
 		},
 		
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Nite_Jogger_Schuh_Grau_FV3619_01_standard.jpg",
@@ -202,7 +202,7 @@
 		},
 		
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/Daily_2.0_Schuh_Grun_EE7826_01_standard.jpg",
@@ -212,7 +212,7 @@
 		},
 		
 		{
-			"category": "shoes",
+			"category": "Shoes",
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/ZX_Torsion_Schuh_Braun_EE5444_01_standard.jpg",
