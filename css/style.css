@@ -430,8 +430,8 @@ main > div {
 
 main > div > a {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: img;
   width: 12rem;
   height: 8rem;
@@ -452,42 +452,39 @@ main > div > a:hover {
 }
 
 main > div > h2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: cat;
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
       align-self: end;
   font-size: 0.8rem;
   font-weight: lighter;
 }
 
 main > div > h3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: name;
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
       align-self: end;
   font-size: 0.8rem;
   margin-top: .3rem;
 }
 
 main > div > span {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: price;
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
       align-self: end;
   font-size: 0.6rem;
 }
 
 main > div > button {
-  -ms-grid-row: 4;
-  -ms-grid-column: 4;
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: btn-buy;
   cursor: pointer;
   width: 2rem;
@@ -503,6 +500,98 @@ main > div > button {
 /* ******************************************************************* PRODUCT ******************************************************************* */
 #product-json {
   display: none;
+}
+
+main > article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "img cat cat"  "img name name" "img spec spec" "img label amount" "img price btn-buy";
+}
+
+main > article > div {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  grid-area: img;
+  width: 56vw;
+  height: 32vw;
+  background-size: 56vw;
+  background-position: 50% 30%;
+  margin-right: 2rem;
+}
+
+main > article > h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: cat;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+main > article > h3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: name;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 20;
+  margin-bottom: .5rem;
+}
+
+main > article > section {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: spec;
+  font-size: .8rem;
+}
+
+main > article > label {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: label;
+  font-size: .8rem;
+}
+
+main > article > input {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: amount;
+}
+
+main > article > span {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: price;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: .8rem;
+}
+
+main > article > button {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: btn-buy;
+  cursor: pointer;
+  width: 2rem;
+  background-color: #0a898d;
+  border: 1px solid white;
+  border-radius: .2rem;
+  font-size: .8rem;
+  color: inherit;
+  padding: .15rem;
+  margin-top: .5rem;
 }
 
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */

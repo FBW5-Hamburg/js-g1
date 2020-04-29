@@ -35,8 +35,6 @@ function getProducts() {
 function getProduct() {    
     if(document.querySelector('#product-json')){
         let productJson = document.querySelector('#product-json').innerText
-        console.log(productJson);
-        
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest()
             xhr.open('GET', productJson)
@@ -103,52 +101,55 @@ window.onload = () => {
         getProduct().then(response => {
             let product = JSON.parse(response).arrProducts
             let currentPage = window.location.href
-            console.log(currentPage);
-            /*
-            product.forEach(element => {
-                let currentPage = window.location.href
-                console.log(currentPage);
+            product.forEach(item => {
+                if(item.url && item.url.slice(item.url.lastIndexOf('/')) === currentPage.slice(currentPage.lastIndexOf('/'))) {
+                    let container = document.createElement('article')
+                    // image
+                    let productIMG = document.createElement('div')
+                    productIMG.href = item.url
+                    productIMG.style.backgroundImage = `url(${item.imgLarge})`
+                    container.append(productIMG)
+                    // category
+                    let productCategory = document.createElement('h2')
+                    productCategory.innerText = item.category
+                    container.append(productCategory)
+                    // name
+                    let productName = document.createElement('h3')
+                    productName.innerText = item.name
+                    container.append(productName)
+                    // article
+                    let productSpec = document.createElement('section')
+                    productSpec.innerText = item.specification
+                    container.append(productSpec)
+                    // price
+                    let productPrice = document.createElement('span')
+                    productPrice.innerText = item.price + " €"
+                    container.append(productPrice)   
+                    //label for amount
+                    let productAmountLabel = document.createElement('label')
+                    productAmountLabel.innerHTML = "Amount"
+                    container.append(productAmountLabel)
+                    // input for amount
+                    let productAmount = document.createElement('input')
+                    productAmount.type = "number"
+                    productAmount.style.size = "2"
+                    container.append(productAmount)     
+                    // btn buy
+                    let btnBuy = document.createElement('button')
+                    btnBuy.innerText = "Buy"
+                    container.append(btnBuy)
+                    btnBuy.addEventListener('click', e => {
+                    // function of cart js
+
+                    })
+                    // append product to document
+                    document.querySelector('main').append(container)
+                }
                 
                 
             })
-            */
-                let main = document.querySelector('main')
-                // image
-                let productIMG = document.createElement('div')
-                productIMG.href = product[i].url
-                productIMG.style.backgroundImage = `url(${product[i].imgSmall})`
-                main.append(productIMG)
-                // category
-                let productCategory = document.createElement('h2')
-                productCategory.innerText = product[i].category
-                main.append(productCategory)
-                // name
-                let productName = document.createElement('h3')
-                productName.innerText = product[i].name
-                main.append(productName)
-                // article
-                let productSpec = document.createElement('article')
-                productSpec.innerText = product[i].specification
-                // price
-                let productPrice = document.createElement('span')
-                productPrice.innerText = product[i].price + " €"
-                main.append(productPrice)   
-                //label for amount
-                let productAmountLabel = document.createElement('label')
-                productAmountLabel.innerHTML = "Amount"
-                main.append(productAmountLabel)
-                //input for amount
-                let productAmount = document.createElement('input')
-                productAmount.style.type = "number"
-                main.append(productAmount)     
-                // btn buy
-                let btnBuy = document.createElement('button')
-                btnBuy.innerText = "Buy"
-                main.append(btnBuy)
-                btnBuy.addEventListener('click', e => {
-                // function of cart js
 
-                });  
+                  
         }).catch(error => {
             console.log(error)
         })
