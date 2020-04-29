@@ -79,8 +79,6 @@ main {
             border-radius: .2rem;
             font-size: $price-size;
             color: inherit;
-            //text-shadow: .1rem .1rem .1rem #065457;
-            //box-shadow: .1rem .1rem .1rem #065457;
             padding: .15rem;
             margin-top: .5rem;
         }
@@ -95,15 +93,16 @@ main {
     // product
     > article {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto 2.5rem;
         grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
-            "img cat cat" 
-            "img name name"
-            "img spec spec"
-            "img label amount"
-            "img price btn-buy"
+            "img cat cat cat" 
+            "img name name name"
+            "img spec spec spec"
+            "img price label amount"
+            "img price . btn-buy"
         ;
+        align-items: start;
         // image
         > div {
             grid-area: img;
@@ -119,6 +118,8 @@ main {
             align-self: end;
             font-size: 1rem;            // $category-size
             font-weight: lighter;
+            margin-bottom: .5rem;
+            align-self: start;
         }
         // name
         > h3 {
@@ -126,40 +127,50 @@ main {
             align-self: end;
             font-size: 20;                // $name-size
             margin-bottom: .5rem;
+            align-self: start;
         }
         // discription
         > section {
             grid-area: spec;
             font-size: .8rem;
+            margin-bottom: 1rem;
+            align-self: start;
+        }
+        // price
+        section + span {
+            grid-area: price;
+            align-self: end;
+            font-size: .8rem;            // $price-size
         }
         // amount
         > label {
             grid-area: label;
             font-size: .8rem;
+            justify-self: end;
+            padding-right: 1rem;
+            align-self: start;
         }
         > input {
             grid-area: amount;
+            height: 1.2rem;
+            text-align: right;
+            align-self: start;
         }
-        // price
-        > span {
-            grid-area: price;
-            align-self: end;
-            font-size: .8rem;            // $price-size
+        input::-webkit-inner-spin-button {
+            opacity: 1;
         }
         // btn buy
         > button {
             grid-area: btn-buy;
             cursor: pointer;
-            width: 2rem;
             background-color: $main-color;
             border: 1px solid $txt-color;
             border-radius: .2rem;
             font-size: .8rem;            // $price-size
             color: inherit;
-            //text-shadow: .1rem .1rem .1rem #065457;
-            //box-shadow: .1rem .1rem .1rem #065457;
             padding: .15rem;
-            margin-top: .5rem;
+            justify-self: stretch;
+            align-self: end;
         }
     }
 }
