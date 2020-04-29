@@ -2,21 +2,18 @@
 /* ************************** CART ************************ */
 window.onload = () => {
 
-    //define local stroage Array
-    let cartArray =[] 
-    //find existing cartlist
-    let jsonObj= localStorage.getItem('cartlist')
-    //convert json to js object
-    let convertedArr = this.JSON.parse(jsonObj)
-    
+        //find existing cartlist
+        let jsonObj= localStorage.getItem('cartlist')
+        //convert json to js object
+        let convertedArr = this.JSON.parse(jsonObj)
 
-    if (convertedArr.length == 0) {
-        let EmptyHeader = document.createElement('h2')
-        EmptyHeader.innerText = "The Cart is Empty"
-        document.querySelector('main').append(EmptyHeader)
-    } 
+        if (convertedArr.length == 0) {
+            let EmptyHeader = document.createElement('h2')
+            EmptyHeader.innerText = "The Cart is Empty"
+            document.querySelector('main').append(EmptyHeader)
+        } 
     
-    else {
+        else {
         
         let tableElem = document.createElement('table');
         tableElem.style.border = "1px solid black"
@@ -46,9 +43,8 @@ window.onload = () => {
         HeaderrowElem.appendChild(tHeader5)     
         tHeader5.innerText = "Price"
     
-
-
         let a = convertedArr.length;
+
         let sumPrice = 0
 
             for (var i = a-1; i >= 0; i--) {
@@ -93,34 +89,29 @@ window.onload = () => {
 
         
                 deleteBtn.addEventListener('click', e => {
-                    //console.log(deletedItem)
-                    let index = convertedArr.indexOf(deletedItem)
-                    console.log(index)
-                    
-                    convertedArr.splice(index, 1)
-
-                    console.log(convertedArr);
+                 //console.log(deletedItem)
+                  let index = convertedArr.indexOf(deletedItem)
+                  //console.log(index)
+                  convertedArr.splice(index, 1)
+                  // console.log(convertedArr);
 
                     // save items in the local storage
-                    localStorage.setItem('cartlist', JSON.stringify(convertedArr))
-                    location.reload();
+                  localStorage.setItem('cartlist', JSON.stringify(convertedArr))
+                  location.reload();
                 });
 
                 // price
                 let productPrice = document.createElement('td')
                 productPrice.innerText = convertedArr[i].productPrice + " €"
                 rowElem.appendChild(productPrice)
-
-                sumPrice = parseFloat(sumPrice )+ parseFloat(convertedArr[i].productPrice)
-
+                sumPrice = parseFloat(sumPrice)+ parseFloat(convertedArr[i].productPrice)
                 productPrice.style.border = "1px solid black"
-
                 tableElem.appendChild(rowElem)
             }
 
-        
-
             document.body.appendChild(tableElem)
+
+            //creat Total-row element for table
 
             let totalrowElem = document.createElement('tr')
             tableElem.appendChild(totalrowElem)
@@ -130,11 +121,10 @@ window.onload = () => {
             totalrowElem.appendChild(totalPriceTEXT)
 
             let totalPrice = document.createElement('td')
-            totalPrice.innerText = sumPrice.toFixed(2)
+            totalPrice.innerText = sumPrice.toFixed(2) + ' €'
             totalrowElem.appendChild(totalPrice)
 
         document.querySelector('main').append(tableElem)
 }
-    //let jsonObjFinal = localStorage.getItem('cartlist')
-        
+   
 };
