@@ -53,6 +53,7 @@ function getProduct() {
 }
 
 window.onload = () => {
+
     //define local stroage Array
     let cartArray =[] 
     //find existing cartlist
@@ -64,6 +65,20 @@ window.onload = () => {
             convertedArr.forEach(element =>{
              cartArray.push(element)   
             });
+
+            // let cartIconEmpty = document.querySelector('[name = cart]')
+            // let cartIconFull = document.querySelector('[name =cartFull]')
+
+
+            // console.log(cartIconEmpty);
+
+            // if (jsonObj.length == 0) {
+            //     cartIconFull.style.styledisplay = "none";
+            //     cartIconEmpty.style.display = "block";
+            // }else{
+            //     cartIconFull.style.display = "block";
+            //     cartIconEmpty.style.display = "none";
+            // }
 
             // checking number of products saved in the local storage
                // console.log(cartArray.length);
@@ -109,8 +124,6 @@ window.onload = () => {
                     // function of cart js
                     //connected with cart .html
                     window.location.href = "/cart.html";
-
-                    
 
                     // create product object
                     let p = parseFloat(products[i].price)
