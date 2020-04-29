@@ -5,7 +5,7 @@
 			"url": "/shoes/superstar.html",
 			"imgSmall": "/img/Superstar_Schuh_klein.png",
 			"imgLarge": "/img/Superstar_Schuh_gross.jpg",
-			"name": "Superstar Schuh",
+			"name": "Superstar",
 			"price": 99.95,
 			"specification": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
 		},	
@@ -14,34 +14,34 @@
 			"url": "/shoes/samba.html",
 			"imgSmall": "/img/Samba_Schuh_klein.png",
 			"imgLarge": "/img/Samba_Schuh_gross.jpg",
-			"name": "Samba Schuh",
+			"name": "Samba",
 			"price": 89.95,
 			"specification": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
 		{
 			"category": "shoes",
-			"url": "",
+			"url": "/shoes/NMD_R1.html",
 			"imgSmall": " ",
 			"imgLarge": "/img/NMD_R1 Schuh.jpg",
-			"name": "NMD_R1 Schuh",
+			"name": "NMD_R1",
 			"price": 139.95,
 			"specification": "High-tech design meets archive attitude. These NMD_R1 Shoes combine the best of adidas' latest technical innovations with the look of '80s racing styles. The colour-fading midsole features a big plug detail. Soft, stretchy knit hugs the foot, and responsive cushioning gives a comfortable feel."
 		},
 		{
 			"category": "shoes",
-			"url": "",
+			"url": "/shoes/Falcon.html",
 			"imgSmall": " ",
 			"imgLarge": "./img/Falcon_Schuh.jpg",
-			"name": "FALCON SCHUH",
+			"name": "Falcon",
 			"price": 99.95,
 		    "specification": "Die bunten TPU-Details und das Finish im Metallic-Look stehen für den 90s-Look.Die dämpfende, leichte EVA-Zwischensohle und das atmungsaktive Mesh-Futter sorgen für angenehmen Tragekomfort."
 		},
 		{
 			"category": "shoes",
-			"url": "",
+			"url": "/shoes/OZWEEGO.html",
 			"imgSmall": " " ,
 			"imgLarge": "./img/OZWEEGO_Schuh.jpg",
-			"name": "OZWEEGO SCHUH",
+			"name": "OZWEEGO",
 			"price": 119.95,
 			"specification": "Dieser Schuh ist von den späten 90ern und frühen 2000ern inspiriert und liefert einen stylishen Mix aus Retro-Elementen und futuristischem Design. Sein Obermaterial kombiniert Mesh, Wildleder und glattes TPU. Außerdem bietet er im Vorfuß- und Fersenbereich gezielten Halt und Dämpfung für ein superbequemes Tragegefühl."
 		},
@@ -49,7 +49,7 @@
 			"category": "shoes",
 			"imgSmall": " ",
 			"imgLarge": "./img/Stan_Smith_Schuh.jpg",
-			"name": "STAN SMITH SCHUH",
+			"name": "Stan Smith",
 			"price": 69.97,
 			"specification": "Mit einem Klassiker machst du nie etwas verkehrt. Der Stan Smith räumt in Sachen Streetstyle ebenso ab wie einst sein Namensgeber auf dem Tennisplatz. Diese Version lässt den Look des Originals von 1971 mit einem minimalistischen Obermaterial aus Leder und einer cleanen Silhouette aufleben."
 		},
@@ -67,7 +67,7 @@
 			"url": "",
 			"imgSmall": " ",
 			"imgLarge": "./img/3MC_Schuh.jpg",
-			"name": "3MC SCHUH",
+			"name": "3MC",
 			"price": 64.95,
 			"specification": "Mit dem adidas 3MC holst du dir lässigen Skate-Style! Seine flexible Gummiaußensohle macht ihn ultrabequem, während der abriebfeste Zehenbereich für ein Plus an Strapazierfähigkeit beim Shredden sorgt."
 		},
@@ -75,7 +75,7 @@
 			"category": "shoes",
 			"imgSmall": " ",
 			"imgLarge": "./img/Busenitz_Schuh.jpg",
-			"name": "BUSENITZ SCHUH",
+			"name": "Busenitz",
 			"price": 89.95,
 			"specification": "Dieser Schuh aus der Zusammenarbeit mit Dennis Busenitz ist vom Copa Mundial Fußballschuh inspiriert und setzt auf Speed und technische Präzision. Er kommt mit einem Obermaterial aus weichem Wildleder und einem gepolsterten Schaft.."
 		},
@@ -84,7 +84,7 @@
 			"url": "",
 			"imgSmall": " ",
 			"imgLarge": "./img/Hamburg_Schuh.jpg",
-			"name": "HAMBURG SCHUH",
+			"name": "Hamburg",
 			"price": 139.95,
 			"specification": "Nichts geht über einen Spaziergang an der Elbpromenade. Der Hamburg war 1982 Teil der berühmten adidas City Series und zeigt sich hier in Farben, die von der Stadt selbst inspiriert sind. So erinnert das Obermaterial aus Leder mit seinen Details in Fischschuppen-Optik an den berühmten Hamburger Fischmarkt, der traditionell jeden Sonntagmorgen seine Pforten öffnet."
 
@@ -94,7 +94,7 @@
 			"url": "",
 			"imgSmall": "",
 			"imgLarge": "./img/DEERUPT_RUNNER_Schuh.jpg",
-			"name": "DEERUPT RUNNER ",
+			"name": "DEERUPT RUNNER",
 			"price": 69.95,
 			"specification": "Der Derrupt feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},

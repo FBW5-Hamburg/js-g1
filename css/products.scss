@@ -90,6 +90,79 @@ main {
 #product-json {
     display: none;
 }
+// main
+main {
+    // product
+    > article {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "img cat cat" 
+            "img name name"
+            "img spec spec"
+            "img label amount"
+            "img price btn-buy"
+        ;
+        // image
+        > div {
+            grid-area: img;
+            width: 56vw;        // $bg-img-size
+            height: 32vw;           // $bg-img-height
+            background-size: 56vw;         // $bg-img-size
+            background-position: $bg-img-position;
+            margin-right: 2rem;
+        }
+        // category
+        > h2 {
+            grid-area: cat;
+            align-self: end;
+            font-size: 1rem;            // $category-size
+            font-weight: lighter;
+        }
+        // name
+        > h3 {
+            grid-area: name;
+            align-self: end;
+            font-size: 20;                // $name-size
+            margin-bottom: .5rem;
+        }
+        // discription
+        > section {
+            grid-area: spec;
+            font-size: .8rem;
+        }
+        // amount
+        > label {
+            grid-area: label;
+            font-size: .8rem;
+        }
+        > input {
+            grid-area: amount;
+        }
+        // price
+        > span {
+            grid-area: price;
+            align-self: end;
+            font-size: .8rem;            // $price-size
+        }
+        // btn buy
+        > button {
+            grid-area: btn-buy;
+            cursor: pointer;
+            width: 2rem;
+            background-color: $main-color;
+            border: 1px solid $txt-color;
+            border-radius: .2rem;
+            font-size: .8rem;            // $price-size
+            color: inherit;
+            //text-shadow: .1rem .1rem .1rem #065457;
+            //box-shadow: .1rem .1rem .1rem #065457;
+            padding: .15rem;
+            margin-top: .5rem;
+        }
+    }
+}
 /* ******************************************************************* MEDIA QUERY ******************************************************************* */
 @media only screen and (max-device-width: 640px) {
     $main-top: 4rem;
