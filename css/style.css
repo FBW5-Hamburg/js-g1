@@ -31,6 +31,25 @@ body {
   background-color: #0a898d;
 }
 
+body.header-not-at-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body.header-not-at-top {
+  padding-top: 44px;
+}
+
+#top-of-site-pixel-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+
 header {
   position: fixed;
   width: 100vw;
