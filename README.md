@@ -1,4 +1,4 @@
-# A web page or webpage is a document, commonly written in HTML, that is viewed in an Internet browser. A web page can be accessed by entering a URL address into a browser's address bar.
+# A web page or webpage is #a document, commonly written in HTML, that is viewed in an Internet browser. A web page can be accessed by entering a URL address into a browser's address bar.
 
 # A dynamic web page is a web page that displays different content each time it's viewed. 
 A dynamic website can contain client-side scripting or server-side scripting to generate the changing content, or a combination of both scripting types. These sites also include HTML programming for the basic structure. The client-side or server-side scripting takes care of the guts of the site.
