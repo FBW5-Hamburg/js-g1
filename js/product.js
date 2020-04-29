@@ -175,9 +175,12 @@ window.onload = () => {
                     productSpec.innerText = item.specification
                     container.append(productSpec)
                     // price
-                    let productPrice = document.createElement('span')
-                    productPrice.innerText = item.price + " €"
-                    container.append(productPrice)   
+                    let nettoPrice = document.createElement('span')
+                    nettoPrice.innerText = Math.round(item.price / 119 * 100) + " €"
+                    container.append(nettoPrice)  
+                    let bruttoPrice = document.createElement('span')
+                    bruttoPrice.innerText = item.price + " €"
+                    container.append(bruttoPrice)   
                     //label for amount
                     let productAmountLabel = document.createElement('label')
                     productAmountLabel.innerHTML = "Amount"
@@ -185,7 +188,9 @@ window.onload = () => {
                     // input for amount
                     let productAmount = document.createElement('input')
                     productAmount.type = "number"
+                    productAmount.min = "1"
                     productAmount.style.size = "2"
+                    productAmount.value = "1"
                     container.append(productAmount)     
                     // btn buy
                     let btnBuy = document.createElement('button')
