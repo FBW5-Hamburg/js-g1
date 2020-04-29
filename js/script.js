@@ -18,9 +18,21 @@ async function getHeader() {
         getSportswear(e)  
         })
         */
+        window.onscroll = function() {scrollFunction()};
+        scrollFunction()
     } else {
         console.log('Connect Error');
     }
+
+    
 }
 
 getHeader()
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("navbar").style.top = "-50px";
+    } else {
+      document.getElementById("navbar").style.top = "0";
+    }
+  }
