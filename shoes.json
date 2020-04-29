@@ -21,7 +21,7 @@
 		{
 			"category": "shoes",
 			"url": "/shoes/NMD_R1.html",
-			"imgSmall": " ",
+			"imgSmall": "/img/NMD_R1 Schuh.png",
 			"imgLarge": "/img/NMD_R1 Schuh.jpg",
 			"name": "NMD_R1",
 			"price": 139.95,
@@ -30,7 +30,7 @@
 		{
 			"category": "shoes",
 			"url": "/shoes/Falcon.html",
-			"imgSmall": " ",
+			"imgSmall": "/img/Falcon_Schuh.png",
 			"imgLarge": "./img/Falcon_Schuh.jpg",
 			"name": "Falcon",
 			"price": 99.95,
@@ -39,7 +39,7 @@
 		{
 			"category": "shoes",
 			"url": "/shoes/OZWEEGO.html",
-			"imgSmall": " " ,
+			"imgSmall": "/img/OZWEEGO_Schuh.png " ,
 			"imgLarge": "./img/OZWEEGO_Schuh.jpg",
 			"name": "OZWEEGO",
 			"price": 119.95,
@@ -47,7 +47,7 @@
 		},
 		{
 			"category": "shoes",
-			"imgSmall": " ",
+			"imgSmall": "/img/Stan_Smith_Schuh.png ",
 			"imgLarge": "./img/Stan_Smith_Schuh.jpg",
 			"name": "Stan Smith",
 			"price": 69.97,
@@ -56,7 +56,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": " ",
+			"imgSmall": "/img/CONTINENTAL_80_Schuh.png",
 			"imgLarge": "./img/CONTINENTAL_80_Schuh.jpg",
 			"name": "CONTINENTAL 80",
 			"price": 76.97,
@@ -65,7 +65,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": " ",
+			"imgSmall": "/img/3MC_Schuh.png ",
 			"imgLarge": "./img/3MC_Schuh.jpg",
 			"name": "3MC",
 			"price": 64.95,
@@ -73,7 +73,7 @@
 		},
 		{
 			"category": "shoes",
-			"imgSmall": " ",
+			"imgSmall": "/img/Busenitz_Schuh.png ",
 			"imgLarge": "./img/Busenitz_Schuh.jpg",
 			"name": "Busenitz",
 			"price": 89.95,
@@ -82,7 +82,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": " ",
+			"imgSmall": "/img/Hamburg_Schuh.png ",
 			"imgLarge": "./img/Hamburg_Schuh.jpg",
 			"name": "Hamburg",
 			"price": 139.95,
@@ -92,7 +92,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/DEERUPT_RUNNER_Schuh.png",
 			"imgLarge": "./img/DEERUPT_RUNNER_Schuh.jpg",
 			"name": "DEERUPT RUNNER",
 			"price": 69.95,
@@ -101,7 +101,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Samba_Schuh.png",
 			"imgLarge": "./img/Samba_Schuh.jpg",
 			"name": "LUCAS PREMIERE PRIMEKNIT SCHUH",
 			"price":68.95,
@@ -110,7 +110,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Campus_Schuh.png",
 			"imgLarge": "./img/Campus_Schuh.jpg",
 			"name": "CAMPUS SCHUH",
 			"price": 89.95,
@@ -119,7 +119,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Coast_Star_Schuh.png",
 			"imgLarge": "./img/Coast_Star_Schuh.jpg",
 			"name": "COAST STAR SCHUH",
 			"price": 55.95,
@@ -128,7 +128,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.png",
 			"imgLarge": "./img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.jpg",
 			"name": "ZX 8000 SCHUH",
 			"price": 94.95,
@@ -137,7 +137,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Aqua_Adilette_Schwarz_F35543_01_standard.png",
 			"imgLarge": "./img/Aqua_Adilette_Schwarz_F35543_01_standard.jpg",
 			"name": "AQUA ADILETTE",
 			"price":19.95,
@@ -146,7 +146,7 @@
 		{
 			"category": "shoes",
 			"url": "",			
-			"imgSmall": "",
+			"imgSmall": "/img/Gazelle_Schuh_Blau_BB5478_01_standard.png",
 			"imgLarge": "./img/Gazelle_Schuh_Blau_BB5478_01_standard.jpg",
 			"name": "GAZELLE SCHUH",
 			"price": 94.95,
@@ -156,7 +156,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Cloudfoam_Adilette_Blau_B42211_01_standard.png",
 			"imgLarge": "./img/Cloudfoam_Adilette_Blau_B42211_01_standard.jpg",
 			"name": "CLOUDFOAM ADILETTE",
 			"price": 17.95,
@@ -165,7 +165,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Adilette_Blau_G16220_01_standard.png",
 			"imgLarge": "./img/Adilette_Blau_G16220_01_standard.jpg",
 			"name": "ADILETTE",
 			"price": 34.95,
@@ -175,7 +175,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/SL_80_Schuh.png",
 			"imgLarge": "./img/SL_80_Schuh.jpg",
 			"name": "SL 80 SCHUH",
 			"price": 99.95,
@@ -184,7 +184,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/SL_72_Schuh_Blau_EG6849_01_standard.png",
 			"imgLarge": "./img/SL_72_Schuh_Blau_EG6849_01_standard.jpg",
 			"name": "SL 72 SCHUH",
 			"price": 89.95,
@@ -194,7 +194,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Nite_Jogger_Schuh_Grau_FV3619_01_standard.png",
 			"imgLarge": "./img/Nite_Jogger_Schuh_Grau_FV3619_01_standard.jpg",
 			"name": "NITE JOGGER SCHUH",
 			"price": 111.95,
@@ -204,7 +204,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Daily_2.0_Schuh_Grun_EE7826_01_standard.png",
 			"imgLarge": "./img/Daily_2.0_Schuh_Grun_EE7826_01_standard.jpg",
 			"name": "DAILY 2.0 SCHUH",
 			"price": 41.95,
@@ -214,7 +214,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/ZX_Torsion_Schuh_Braun_EE5444_01_standard.png",
 			"imgLarge": "./img/ZX_Torsion_Schuh_Braun_EE5444_01_standard.jpg",
 			"name": "ZX TORSION SCHUH",
 			"price": 104.95,
@@ -224,7 +224,7 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.png",
 			"imgLarge": "./img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.jpg",
 			"name": "Campus ADV Schuh Gelb EF8474 01 standard",
 			"price": 85.95,
@@ -234,12 +234,83 @@
 		{
 			"category": "shoes",
 			"url": "",
-			"imgSmall": "",
+			"imgSmall": "/img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.png",
 			"imgLarge": "./img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.jpg",
 			"name": "Continental 80 Baara Schuh Schwarz EF677001standard",
-			"price": 72.99,
-			"specification": ""
+			"price": 70.45,
+			"specification": "EVA midsole and trail inspired rubber outsole toe closure nylon upper with leather covers Lightweight, durable feeling Reflective shoes with fresh details textile lining"
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "/img/Gazelle_Schuh_Orange_EE5498_01_standard.png",
+			"imgLarge": "./img/Gazelle_Schuh_Orange_EE5498_01_standard.jpg",
+			"name": "Gazelle Schuh Orange EE5498 01 standard",
+			"price": 49.99,
+			"specification": "With this new edition we celebrate the timeless style of the Gazelle from 1991. It comes with the same, super soft suede upper and clean design as it did then. Of course, the T-shaped overlay in the toe area and the jagged 3-stripes for the authentic adidas style should not be missing."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.png",
+			"imgLarge": "./img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.jpg",
+			"name": "Nite Jogger Schuh Schwarz FW4275 01 standard",
+			"price": 75.99,
+			"specification": "The running shoe in the 80s style has received an update - the new Nite Jogger from adidas Originals impresses with a unique design."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/NMD_R1_Schuh_Grau_EH0044_01_standard.png",
+			"imgLarge": "./img/NMD_R1_Schuh_Grau_EH0044_01_standard.jpg",
+			"name": "NMD R1 Schuh Grau EH0044 01 standard",
+			"price": 139.99,
+			"specification": "The NMD combines the best in the field of running shoe technology with a casual streetwear vibe. This version is also inspired by a model from our adidas archives. The contrasting signature elements on the midsole attract attention."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/OZWEEGO_Schuh_Schwarz_EE6999_01_standard.png",
+			"imgLarge": "./img/OZWEEGO_Schuh_Schwarz_EE6999_01_standard.jpg",
+			"name": "OZWEEGO Schuh Schwarz EE6999 01 standard",
+			"price": 120.00,
+			"specification": "The Ozweego sneaker from adidas Originals brings you the retro style of the 90s in your sneaker collection. Inspired by the upper floor, this women's sneaker presents itself with a top made of mesh and elements made of suede. In black, the Ozweego with EVA midsole and Adiprene padding on the forefoot and heel cushions every step."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/Pharrell_Williams_Stan_Smith_Schuh_Beige_FX8003_01_standard.png",
+			"imgLarge": "./img/Pharrell_Williams_Stan_Smith_Schuh_Beige_FX8003_01_standard.jpg",
+			"name": "Pharrell Williams Stan Smith Schuh Beige FX8003 01 standard",
+			"price": 120.00,
+			"specification": "leather"
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/Rom_Schuh_Braun_EE5747_01_standard.png",
+			"imgLarge": "./img/Rom_Schuh_Braun_EE5747_01_standard.jpg",
+			"name": "Rom Schuh Braun EE5747 01 standard",
+			"price": 99.00,
+			"specification": "The reissue of classics just makes adidas good, so we prefer our metaphorical hat. The Rome is back with an announcement: vintage style finish, striking branding, earth tones and a striking rubber outsole."
+		},
+
+		{
+			"category": "shoes",
+			"url": "",
+			"imgSmall": "./img/SL_72_Schuh_Grun_EG5198_01_standard.png",
+			"imgLarge": "./img/SL_72_Schuh_Grun_EG5198_01_standard.jpg",
+			"name": "SL 72 Schuh Grun EG5198 0 standard",
+			"price": 107.00,
+			"specification": "'SL 72' leather sneakers from adidas. Features: characteristic three-colored stripes, contrasting inserts, logo patch on the tongue, round cap, lacing in the front, corrugated rubber sole and low heel"
 		}
+
 
     ]       
 }
