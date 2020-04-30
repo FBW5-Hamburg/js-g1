@@ -148,13 +148,13 @@ main {
             font-size: .8rem;
             justify-self: end;
             padding-right: 1rem;
-            align-self: start;
+            align-self: end;
         }
         > input {
             grid-area: amount;
             height: 1.2rem;
             text-align: right;
-            align-self: start;
+            align-self: end;
         }
         input::-webkit-inner-spin-button {
             opacity: 1;
@@ -221,6 +221,72 @@ main {
                 width: 3rem;
                 padding: .2rem;
                 margin-top: .5rem;
+            }
+        }
+    }
+    // product
+    main {
+        > article {
+            display: grid;
+            grid-template-columns: auto auto auto 2.5rem;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas:
+                "img img img img"
+                "cat cat cat cat"
+                "name name name name"
+                "spec spec spec spec"
+                ". . label amount"
+                "price . . btn-buy"
+            ;
+            align-items: start;
+            // image
+            > div {
+                grid-area: img;
+                width: 90vw;        // $bg-img-size
+                height: 60vw;           // $bg-img-height
+                background-size: 100%;         // $bg-img-size
+                background-position: $bg-img-position;
+                margin: 0 0 2rem 0;
+            }
+            // category
+            > h2 {
+                grid-area: cat;
+                align-self: end;
+                font-size: 1rem;            // $category-size
+                font-weight: lighter;
+                margin-bottom: .5rem;
+                align-self: start;
+            }
+            // name
+            > h3 {
+                grid-area: name;
+                align-self: end;
+                font-size: 20;                // $name-size
+                margin-bottom: .5rem;
+                align-self: start;
+            }
+            // discription
+            > section {
+                grid-area: spec;
+                margin-bottom: 2rem;
+                align-self: start;
+            }
+            // price
+            section + span {
+                grid-area: price;
+                align-self: end;            // $price-size
+            }
+            // amount
+            > label {
+                grid-area: label;
+                justify-self: end;
+                align-self: start;
+            }
+            > input {
+                grid-area: amount;
+                text-align: right;
+                align-self: start;
+                margin-bottom: 1rem;
             }
         }
     }

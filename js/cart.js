@@ -53,11 +53,7 @@ window.onload = () => {
                 console.log(convertedArr[i])
 
                 let col_1 = document.createElement('td')
-
-                let productIMG = document.createElement('img')
-                productIMG.src = convertedArr[i].productImg
-                col_1.appendChild(productIMG)
-                console.log(col_1);
+                col_1.style.backgroundImage = `url(${convertedArr[i].productImg})`
                 rowElem.appendChild(col_1)
 
                 // name
@@ -108,6 +104,15 @@ window.onload = () => {
 
             let totalrowElem = document.createElement('tr')
             tableElem.appendChild(totalrowElem)
+
+            let td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
 
             let totalPriceTEXT = document.createElement('td')
             totalPriceTEXT.innerText = 'Total Amount:'

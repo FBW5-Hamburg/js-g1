@@ -4,9 +4,31 @@ table {
   background-color: white;
   color: black;
   border: none;
+  padding: 2rem 4rem;
 }
 
 table th, table td {
   border: none;
+}
+
+table th {
+  text-align: left;
+}
+
+table th:last-of-type {
+  text-align: right;
+}
+
+table td {
+  height: 4rem;
+  background-size: cover;
+}
+
+table tr > td:last-child {
+  text-align: right;
+}
+
+table td:first-of-type img {
+  width: 12rem;
 }
 /*# sourceMappingURL=cart.css.map */

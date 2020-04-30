@@ -142,15 +142,16 @@ header #nav-sub {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /*
+        > li:nth-child(2) {
+            margin-right: 3vw;
+            display: none;
+        }
+        */
 }
 
 header #nav-sub > li:nth-child(1) {
   margin-right: 3vw;
-}
-
-header #nav-sub > li:nth-child(2) {
-  margin-right: 3vw;
-  display: none;
 }
 
 header #nav-sub > li > a {
@@ -253,7 +254,6 @@ header #nav-sub > li > a {
   }
   header #toggle-main + label #nav-main > li {
     margin-bottom: 2rem;
-    background-color: transparent;
   }
   header #toggle-main + label #nav-main > li > a {
     padding: 0;
@@ -263,6 +263,7 @@ header #nav-sub > li > a {
   }
   header #toggle-main + label #nav-main > li:first-child > ul {
     position: static;
+    background-color: transparent;
   }
   header #toggle-main + label > div:last-child {
     display: block;
@@ -601,9 +602,9 @@ main > article > label {
   -ms-grid-column-align: end;
       justify-self: end;
   padding-right: 1rem;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 main > article > input {
@@ -612,9 +613,9 @@ main > article > input {
   grid-area: amount;
   height: 1.2rem;
   text-align: right;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 main > article input::-webkit-inner-spin-button {
@@ -684,6 +685,96 @@ main > article > button:checked {
     padding: .2rem;
     margin-top: .5rem;
   }
+  main > article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto 2.5rem;
+        grid-template-columns: auto auto auto 2.5rem;
+    -ms-grid-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "img img img img" "cat cat cat cat" "name name name name" "spec spec spec spec" ". . label amount" "price . . btn-buy";
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  main > article > div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: img;
+    width: 90vw;
+    height: 60vw;
+    background-size: 100%;
+    background-position: 50% 40%;
+    margin: 0 0 2rem 0;
+  }
+  main > article > h2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: cat;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: .5rem;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  main > article > h3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: name;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    font-size: 20;
+    margin-bottom: .5rem;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  main > article > section {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: spec;
+    margin-bottom: 2rem;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  main > article section + span {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: price;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  main > article > label {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: label;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  main > article > input {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+    grid-area: amount;
+    text-align: right;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-bottom: 1rem;
+  }
 }
 
 /* ******************************************************************* CART ******************************************************************* */
@@ -692,9 +783,29 @@ table {
   background-color: white;
   color: black;
   border: none;
+  padding: 2rem 4rem;
+  /*
+    th {
+        text-align: left;
+    }
+    th:last-of-type {
+        text-align: right;
+    }
+    tr > td:last-child {
+        text-align: right;
+    }
+    */
 }
 
 table th, table td {
   border: none;
+  text-align: center;
+}
+
+table td:first-of-type {
+  width: 12rem;
+  height: 8rem;
+  background-size: 12rem;
+  background-position: 50% 40%;
 }
 /*# sourceMappingURL=style.css.map */
