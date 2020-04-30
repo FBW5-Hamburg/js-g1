@@ -2,24 +2,20 @@
 /* ************************** CART ************************ */
 window.onload = () => {
 
-    //define local stroage Array
-    let cartArray =[] 
-    //find existing cartlist
-    let jsonObj= localStorage.getItem('cartlist')
-    //convert json to js object
-    let convertedArr = this.JSON.parse(jsonObj)
-    
+        //find existing cartlist
+        let jsonObj= localStorage.getItem('cartlist')
+        //convert json to js object
+        let convertedArr = this.JSON.parse(jsonObj)
 
-    if (convertedArr.length == 0) {
-        let EmptyHeader = document.createElement('h2')
-        EmptyHeader.innerText = "The Cart is Empty"
-        document.querySelector('main').append(EmptyHeader)
-    } 
+        if (convertedArr.length == 0) {
+            let EmptyHeader = document.createElement('h2')
+            EmptyHeader.innerText = "The Cart is Empty"
+            document.querySelector('main').append(EmptyHeader)
+        } 
     
-    else {
+        else {
         
         let tableElem = document.createElement('table');
-        tableElem.style.border = "1px solid black"
 
         let HeaderrowElem = document.createElement('tr')
         tableElem.appendChild(HeaderrowElem)
@@ -46,9 +42,8 @@ window.onload = () => {
         HeaderrowElem.appendChild(tHeader5)     
         tHeader5.innerText = "Price"
     
-
-
         let a = convertedArr.length;
+
         let sumPrice = 0
 
             for (var i = a-1; i >= 0; i--) {
@@ -58,31 +53,22 @@ window.onload = () => {
                 console.log(convertedArr[i])
 
                 let col_1 = document.createElement('td')
-
-                col_1.style.border = "1px solid black"
-
-                let productIMG = document.createElement('img')
-                productIMG.src = convertedArr[i].productIMG
-                col_1.appendChild(productIMG)
-                console.log(col_1);
+                col_1.style.backgroundImage = `url(${convertedArr[i].productImg})`
                 rowElem.appendChild(col_1)
 
                 // name
                 let productName = document.createElement('td')
                 productName.innerText = convertedArr[i].productName
                 rowElem.appendChild(productName)
-                productName.style.border = "1px solid black"
 
                 //amount
                 let productAmount = document.createElement('td')
                 productAmount.innerText = convertedArr[i].amount
                 rowElem.appendChild(productAmount)
-                productAmount.style.border = "1px solid black"
                 console.log(productAmount)
 
                 //delete
                 let deleteProduct = document.createElement('td')
-                deleteProduct.style.border = "1px solid black"
                 rowElem.appendChild(deleteProduct)
                 
                 let deleteBtn = document.createElement('button')
@@ -91,53 +77,52 @@ window.onload = () => {
                 
                 let deletedItem = convertedArr[i]
 
-                
-
-                
-                
+        
                 deleteBtn.addEventListener('click', e => {
-                    //console.log(deletedItem)
-                    let index = convertedArr.indexOf(deletedItem)
-                    console.log(index)
-                    
-                    convertedArr.splice(index, 1)
-
-                    console.log(convertedArr);
+                 //console.log(deletedItem)
+                  let index = convertedArr.indexOf(deletedItem)
+                  //console.log(index)
+                  convertedArr.splice(index, 1)
+                  // console.log(convertedArr);
 
                     // save items in the local storage
-                    localStorage.setItem('cartlist', JSON.stringify(convertedArr))
-                    location.reload();
+                  localStorage.setItem('cartlist', JSON.stringify(convertedArr))
+                  location.reload();
                 });
 
                 // price
                 let productPrice = document.createElement('td')
                 productPrice.innerText = convertedArr[i].productPrice + " €"
                 rowElem.appendChild(productPrice)
-
-                sumPrice = parseFloat(sumPrice )+ parseFloat(convertedArr[i].productPrice)
-
-                productPrice.style.border = "1px solid black"
-
+                sumPrice = parseFloat(sumPrice)+ parseFloat(convertedArr[i].productPrice)
                 tableElem.appendChild(rowElem)
             }
 
-        
-
             document.body.appendChild(tableElem)
+
+            //creat Total-row element for table
 
             let totalrowElem = document.createElement('tr')
             tableElem.appendChild(totalrowElem)
+
+            let td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
 
             let totalPriceTEXT = document.createElement('td')
             totalPriceTEXT.innerText = 'Total Amount:'
             totalrowElem.appendChild(totalPriceTEXT)
 
             let totalPrice = document.createElement('td')
-            totalPrice.innerText = sumPrice.toFixed(2)
+            totalPrice.innerText = sumPrice.toFixed(2) + ' €'
             totalrowElem.appendChild(totalPrice)
 
         document.querySelector('main').append(tableElem)
 }
-    //let jsonObjFinal = localStorage.getItem('cartlist')
-        
+   
 };

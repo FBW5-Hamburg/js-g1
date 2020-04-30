@@ -6,18 +6,10 @@ $nav-main-left-right: 0 2vw;
 $sub-main: .6rem;
 $nav-sub-left-right: 0 .5vw;
 // sizes
-$font: 16px;
 $header-height: 4rem;
 $logo-size: 3rem;
 $sub-main-size: .8rem;
 /* ******************************************************************* HEADER ******************************************************************* */
-// font
-html {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: $font;
-    color: $txt-color;
-    letter-spacing: .03rem;
-}
 // background
 body {
     background-color: $main-color;
@@ -108,9 +100,15 @@ header {
         flex-grow: 2;
         justify-content: space-between;
         // shopping cart
-        > li:first-child {
+        > li:nth-child(1) {
             margin-right: 3vw;
         }
+        /*
+        > li:nth-child(2) {
+            margin-right: 3vw;
+            display: none;
+        }
+        */
         > li > a {
             color: inherit;
         }
@@ -198,13 +196,16 @@ header {
                 // menu list
                 > li {
                     margin-bottom: 2rem;
-                    background-color: transparent;
                     > a {
                         padding: 0;
                     }
                 }
                 > li:first-child {
                     margin-top: $header-height + 2rem;
+                    > ul {
+                        position: static;
+                        background-color: transparent;
+                    }
                 }
             }
             // toggle lines
