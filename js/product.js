@@ -76,6 +76,7 @@ window.onload = () => {
                 let productIMG = document.createElement('a')
                 productIMG.href = products[i].url
                 productIMG.style.backgroundImage = `url(${products[i].imgSmall})`
+                productIMG.name = products[i].name
                 container.append(productIMG)
 
                 // category
@@ -101,24 +102,24 @@ window.onload = () => {
                 btnBuy.addEventListener('click', e => {
                 // function of cart js
 
-                //connected with cart .html
-                window.location.href = "/cart.html";
+                    //connected with cart .html
+                    // window.location.href = "/cart.html";
 
-                // create product object
-                let p = parseFloat(products[i].price).toFixed(2)
+                    // create product object
+                    let p = parseFloat(products[i].price).toFixed(2)
 
-                //instance of class
-                let buyProduct = new myproduct(products[i].name, products[i].imgSmall,"",p,products[i].category,"","0.19","1")
+                    //instance of class
+                    let buyProduct = new myproduct(products[i].name, products[i].imgSmall,"",p,products[i].category,"","0.19","1")
 
-                //add new item to the cartArray
-                cartArray.push(buyProduct)
+                    //add new item to the cartArray
+                    cartArray.push(buyProduct)
 
-                //convert object to json
-                let cartArrayJson = JSON.stringify(cartArray)
+                    //convert object to json
+                    let cartArrayJson = JSON.stringify(cartArray)
 
-                // save items in the local storage
-                localStorage.setItem('cartlist',cartArrayJson)
-
+                    // save items in the local storage
+                    localStorage.setItem('cartlist',cartArrayJson)
+                    cartToggle(cartArray)
                 });
                 // append product to document
                 document.querySelector('main').append(container)     
@@ -153,9 +154,11 @@ window.onload = () => {
                     productSpec.innerText = item.specification
                     container.append(productSpec)
                     // price
+                    /*
                     let nettoPrice = document.createElement('span')
                     nettoPrice.innerText = Math.round(item.price / 119 * 100) + " €"
-                    container.append(nettoPrice)  
+                    container.append(nettoPrice)
+                    */  
                     let bruttoPrice = document.createElement('span')
                     bruttoPrice.innerText = item.price + " €"
                     container.append(bruttoPrice)   
@@ -165,7 +168,6 @@ window.onload = () => {
                     container.append(productAmountLabel)
                     // input for amount
                     let productAmount = document.createElement('input')
-                    //productAmount.type = "number"
                     productAmount.setAttribute('type','number')
                     productAmount.min = "1"
                     productAmount.style.size = "2"
@@ -181,7 +183,7 @@ window.onload = () => {
                     // function of cart js
 
                     //connected with cart .html
-                    window.location.href = "/cart.html"
+                    // window.location.href = "/cart.html"
 
                     // create product object
                     let p = parseFloat(item.price)

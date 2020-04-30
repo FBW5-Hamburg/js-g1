@@ -1,0 +1,30 @@
+
+/* ******************************************************************* CART ******************************************************************* */
+table {
+    width: 100vw;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 2rem 4rem;
+    th, td {
+        border: none;
+        text-align: center;
+    }
+    /*
+    th {
+        text-align: left;
+    }
+    th:last-of-type {
+        text-align: right;
+    }
+    tr > td:last-child {
+        text-align: right;
+    }
+    */
+    td:first-of-type {
+        width: $bg-img-size;
+        height: $bg-img-height;
+        background-size: $bg-img-size;
+        background-position: $bg-img-position;
+    }
+}

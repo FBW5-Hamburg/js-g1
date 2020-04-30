@@ -16,7 +16,6 @@ window.onload = () => {
         else {
         
         let tableElem = document.createElement('table');
-        tableElem.style.border = "1px solid black"
 
         let HeaderrowElem = document.createElement('tr')
         tableElem.appendChild(HeaderrowElem)
@@ -54,31 +53,22 @@ window.onload = () => {
                 console.log(convertedArr[i])
 
                 let col_1 = document.createElement('td')
-
-                col_1.style.border = "1px solid black"
-
-                let productIMG = document.createElement('img')
-                productIMG.src = convertedArr[i].productIMG
-                col_1.appendChild(productIMG)
-                console.log(col_1);
+                col_1.style.backgroundImage = `url(${convertedArr[i].productImg})`
                 rowElem.appendChild(col_1)
 
                 // name
                 let productName = document.createElement('td')
                 productName.innerText = convertedArr[i].productName
                 rowElem.appendChild(productName)
-                productName.style.border = "1px solid black"
 
                 //amount
                 let productAmount = document.createElement('td')
                 productAmount.innerText = convertedArr[i].amount
                 rowElem.appendChild(productAmount)
-                productAmount.style.border = "1px solid black"
                 console.log(productAmount)
 
                 //delete
                 let deleteProduct = document.createElement('td')
-                deleteProduct.style.border = "1px solid black"
                 rowElem.appendChild(deleteProduct)
                 
                 let deleteBtn = document.createElement('button')
@@ -105,7 +95,6 @@ window.onload = () => {
                 productPrice.innerText = convertedArr[i].productPrice + " €"
                 rowElem.appendChild(productPrice)
                 sumPrice = parseFloat(sumPrice)+ parseFloat(convertedArr[i].productPrice)
-                productPrice.style.border = "1px solid black"
                 tableElem.appendChild(rowElem)
             }
 
@@ -115,6 +104,15 @@ window.onload = () => {
 
             let totalrowElem = document.createElement('tr')
             tableElem.appendChild(totalrowElem)
+
+            let td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
+
+            td = document.createElement('td')
+            totalrowElem.appendChild(td)
 
             let totalPriceTEXT = document.createElement('td')
             totalPriceTEXT.innerText = 'Total Amount:'
