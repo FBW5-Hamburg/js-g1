@@ -103,10 +103,12 @@ header {
         > li:nth-child(1) {
             margin-right: 3vw;
         }
+        /*
         > li:nth-child(2) {
             margin-right: 3vw;
             display: none;
         }
+        */
         > li > a {
             color: inherit;
         }
@@ -194,7 +196,6 @@ header {
                 // menu list
                 > li {
                     margin-bottom: 2rem;
-                    background-color: transparent;
                     > a {
                         padding: 0;
                     }
@@ -203,6 +204,7 @@ header {
                     margin-top: $header-height + 2rem;
                     > ul {
                         position: static;
+                        background-color: transparent;
                     }
                 }
             }
