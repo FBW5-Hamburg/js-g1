@@ -7,4 +7,21 @@ A dynamic website can contain client-side scripting or server-side scripting to 
 With client-side HTML scripting, the page can use JavaScript or another scripting language to change the data of page as it is dynamically built.
 # Here is a Dynamic Online Shop created with Vanilla JS.
 For example, here we try to make a web page as like adidas.
-# Made by a group of people(Ingo , Rebecca , Chumky)
+
+# Authors
+1.ingo
+2.Rebecca
+3.Chumky
+FBW5
+
+# Table of Content:
+1.html5
+2.CSS
+3.SCSS
+4.Vanilla Javascript
+
+
+
+
+
+
