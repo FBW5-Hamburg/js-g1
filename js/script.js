@@ -1,7 +1,7 @@
 "use strict"
 /* ********************************************************************* HEADER ********************************************************************** */
 async function getHeader() {
-    let response = await fetch('./temp/header.html')
+    let response = await fetch('/temp/header.html')
     if(response.ok) {
         let data = await response.text()
          let header = document.querySelector('header')
