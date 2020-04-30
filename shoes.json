@@ -39,7 +39,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Nite_Jogger.html",
 			"imgSmall": "/img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.png",
 			"imgLarge": "/img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.jpg",
 			"name": "NITE JOGGER SCHUH",
@@ -48,7 +48,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/SL_72.html",
 			"imgSmall": "/img/SL_72_Schuh_Grun_EG5198_01_standard.png",
 			"imgLarge": "/img/SL_72_Schuh_Grun_EG5198_01_standard.jpg",
 			"name": "SL 72 SCHUH",
@@ -57,7 +57,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Campus_ADV.html",
 			"imgSmall": "/img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.png",
 			"imgLarge": "/img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.jpg",
 			"name": "CAMPUS SCHUH",
@@ -76,7 +76,7 @@
 		{
 			"category": "Shoes",
 			"url": "/shoes/OZWEEGO.html",
-			"imgSmall": "" ,
+			"imgSmall": "OZWEEGO_Schuh_Schwarz_EE6999_01_standard.png" ,
 			"imgLarge": "./img/OZWEEGO_Schuh_Schwarz_EE6999_01_standard.jpg",
 			"name": "OZWEEGO",
 			"price": 119.95,
@@ -93,7 +93,7 @@
 		{
 			"category": "Shoes",
 			"url": "",
-			"imgSmall": " ",
+			"imgSmall": "/img/CONTINENTAL_80_Schuh.png",
 			"imgLarge": "./img/CONTINENTAL_80_Schuh.jpg",
 			"name": "CONTINENTAL 80",
 			"price": 76.97,
@@ -101,7 +101,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/3MC_Schuh.html",
 			"imgSmall": "/img/3MC_Schuh.png ",
 			"imgLarge": "./img/3MC_Schuh.jpg",
 			"name": "3MC",
@@ -118,7 +118,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Hamburg_Schuh.html",
 			"imgSmall": "/img/Hamburg_Schuh.png ",
 			"imgLarge": "./img/Hamburg_Schuh.jpg",
 			"name": "Hamburg",
@@ -128,7 +128,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/DEERUPT_RUNNER.html",
 			"imgSmall": "/img/DEERUPT_RUNNER_Schuh.png",
 			"imgLarge": "./img/DEERUPT_RUNNER_Schuh.jpg",
 			"name": "DEERUPT RUNNER",
@@ -137,7 +137,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Samba_Schuh.html",
 			"imgSmall": "/img/Samba_Schuh.png",
 			"imgLarge": "./img/Samba_Schuh.jpg",
 			"name": "LUCAS PREMIERE PRIMEKNIT SCHUH",
@@ -146,7 +146,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Campus_Schuh.html",
 			"imgSmall": "/img/Campus_Schuh.png",
 			"imgLarge": "./img/Campus_Schuh.jpg",
 			"name": "CAMPUS SCHUH",
@@ -155,7 +155,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Coast_Star.html",
 			"imgSmall": "/img/Coast_Star_Schuh.png",
 			"imgLarge": "./img/Coast_Star_Schuh.jpg",
 			"name": "COAST STAR SCHUH",
@@ -164,7 +164,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/ZX_8000.html",
 			"imgSmall": "/img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.png",
 			"imgLarge": "./img/ZX_8000_Schuh_Schwarz_EH1505_01_standard.jpg",
 			"name": "ZX 8000 SCHUH",
@@ -173,7 +173,7 @@
 		},
 		{
 			"category": "Shoes",
-			"url": "",
+			"url": "/shoes/Aqua_Adilette.html",
 			"imgSmall": "/img/Aqua_Adilette_Schwarz_F35543_01_standard.png",
 			"imgLarge": "./img/Aqua_Adilette_Schwarz_F35543_01_standard.jpg",
 			"name": "AQUA ADILETTE",
