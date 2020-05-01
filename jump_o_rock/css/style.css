@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+canvas {
+    position: absolute;
+    top: calc(50% - 160px);
+    left: calc(50% - 300px);
+    border-radius: 12px;
+}
+#UI {
+    z-index: 4;
+}
+#game {
+    z-index: 3;
+}
+#rock {
+    z-index: 2;
+}
+#background_2 {
+    z-index: 1;
+}
+#background_1 {
+    z-index: 0;
+}
+
+input {
+    position: absolute;
+    top: calc(50%);
+    left: calc(50% - 35px);
+    border: 1px solid black;
+    border-radius: 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 2px;
+    width: 50px;
+    background-color: aqua;
+    z-index: 4;
+    padding-inline-start: 1px;
+    padding: 0 2px 0 2px;
+
+}
