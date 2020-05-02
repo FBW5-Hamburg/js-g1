@@ -145,6 +145,14 @@ function pressEnter(canvas) {
     canvas.clearRect(250, 110, 80, 40)
     canvas.fillText("Press 'Enter'", 245, 110)
 }
+// error message
+function setErrorM(canvas5, input, regex) {
+    if(regex.test(input.value) === false) {
+        canvas5.fillStyle = 'red'
+        canvas5.font = '18px Arial'
+        canvas5.fillText('Only letters!', 245, 140)
+    }
+}
 // create and control Input
 function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound) {
     // create Input
@@ -157,18 +165,18 @@ function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound)
     input.onchange = () => {
         // clear error message
         canvas5.clearRect(245, 140, 80, 20)
+        // set error message
         if(regex.test(input.value) === false) {
-            canvas5.fillStyle = 'red'
-            canvas5.font = '18px Arial'
-            canvas5.fillText('Only letters!', 245, 140)
+            setErrorM(canvas5, input, regex)
         }
-        window.onkeypress = function(e) {
-            if(e.key === 'Enter') {
+    }
+    // enter highscore
+    window.onkeypress = function(e) {
+        if(e.key === 'Enter') {
+            if(regex.test(input.value) === false) {
                 // highscore list
                 let name = input.value
-                console.log(name);
-                
-                if(!name || name === '') {
+                if(!name) {
                     name = '---'
                 }
                 // player
@@ -190,6 +198,8 @@ function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound)
                 document.body.removeChild(input)
                 // restart game
                 restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound, highscore)
+            } else {
+                setErrorM(canvas5, input, regex)
             }
         }
     }
