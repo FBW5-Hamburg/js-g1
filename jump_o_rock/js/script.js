@@ -56,49 +56,9 @@ function setHeart(canvas, heartX, heartY, heartWidth, heartHeight) {
         }
     }    
 }
-// control input
-function controlInput(input, playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound) {
-    let regex = new RegExp(/[a-z A-Z_]*/)
-    input.onchange = () => {
-        // clear error message
-        canvas5.clearRect(245, 140, 80, 20)
-        if(regex.test(input.value) === true) {
-            // restart game
-            window.onkeypress = function(e) {
-                if(e.key === 'Enter') {
-                    // highscore list
-                    let name = input.value
-                    if(!name) {
-                        name = '---'
-                    }
-                    // player
-                    let player = {
-                        'id': name.toUpperCase(),
-                        'score': parseInt(localStorage.getItem('score'))
-                    }
-                    // top ten
-                    if(playerArr.length > 10) {
-                        playerArr.pop()
-                    }
-                    playerArr.push(player)
-                    localStorage.setItem('highscore', JSON.stringify(playerArr.sort((a, b) => {return b.score - a.score})))
-                    localStorage.removeItem('score')
-                    canvas5.clearRect(245, 140, 80, 20)
-                    document.body.removeChild(input)
-                    restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound)
-                }
-            }
-        } else {
-            canvas5.fillStyle = 'red'
-            canvas5.font = '18px Arial'
-            canvas5.fillText('Only letters!', 245, 140)
-        }
-    }
-}
 // print highscore list
 let highscore = {
     stop: false,
-    top10: "",
     printHighscore: function (canvas, playerArr, x, y) {
         canvas.fillStyle = 'black'
         canvas.font = '18px Arial'
@@ -131,7 +91,7 @@ let highscore = {
                 y += 20
             }
             let top10 = setInterval(() => {
-                if(page === true) {
+                if(page === true && this.stop === false) {
                     canvas.clearRect(200, 140, 180, 260)
                     y = 160
                     for (let i = 5; i < playerArr.length; i++) {
@@ -144,7 +104,7 @@ let highscore = {
                         y += 20
                     }
                     page = false
-                } else {
+                } else if(page === false && this.stop === false) {
                     canvas.clearRect(200, 140, 180, 260)
                     y = 160
                     for (let i = 0; i < 5; i++) {
@@ -157,23 +117,14 @@ let highscore = {
                         y += 20
                     }
                     page = true
-                }
-                console.log(top10);
-                
-                // stop highscore
-                if(this.stop === true) {
-                    console.log(this.stop);
-                    console.log(this.top10);
-                    
-                    clearInterval(this.top10)
+                } else {
+                    // stop highscore
+                    clearInterval(top10)
                     canvas.clearRect(160, 120, 300, 300)
                 }
-                console.log('Hi');
-                
             }, 5000)
         }
     }
-
 }
 // create sound
 function sound(src) {
@@ -194,16 +145,66 @@ function pressEnter(canvas) {
     canvas.clearRect(250, 110, 80, 40)
     canvas.fillText("Press 'Enter'", 245, 110)
 }
+// create and control Input
+function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound) {
+    // create Input
+    let input = document.createElement('input')
+    input.type = 'text'
+    input.setAttribute('maxlength', 3)
+    document.body.append(input)
+    // control Input
+    let regex = new RegExp(/[a-zA-Z_]*/)
+    input.onchange = () => {
+        // clear error message
+        canvas5.clearRect(245, 140, 80, 20)
+        if(regex.test(input.value) === false) {
+            canvas5.fillStyle = 'red'
+            canvas5.font = '18px Arial'
+            canvas5.fillText('Only letters!', 245, 140)
+        }
+        window.onkeypress = function(e) {
+            if(e.key === 'Enter') {
+                // highscore list
+                let name = input.value
+                console.log(name);
+                
+                if(!name || name === '') {
+                    name = '---'
+                }
+                // player
+                let player = {
+                    'id': name.toUpperCase(),
+                    'score': JSON.parse(localStorage.getItem('score'))
+                }
+                // top ten
+                if(playerArr.length >= 10) {
+                    playerArr.pop()
+                    playerArr.push(player)
+                } else {
+                    playerArr.push(player)
+                    localStorage.setItem('highscore', JSON.stringify(playerArr.sort((a, b) => {return b.score - a.score})))
+                }
+                // clear user interface
+                canvas5.clearRect(245, 140, 80, 20)
+                // clear input
+                document.body.removeChild(input)
+                // restart game
+                restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound, highscore)
+            }
+        }
+    }
+}
 // restart game
-function restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound) {
+function restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound, gameHighscore) {
     gameNum = 3
-    highscore.stop = false
+    gameHighscore.stop = false
+    localStorage.removeItem('score')
+    sound.remove()
     canvas1.clearRect(0, 0, background_1.width, background_1.height)
     canvas2.clearRect(0, 0, background_2.width, background_2.height)
     canvas3.clearRect(0, 0, rock.width, rock.height)
     canvas4.clearRect(0, 0, game.width, game.height)
     canvas5.clearRect(0,0, UI.width, UI.height)
-    sound.remove()
     startGame()
 }              
 /* ********************************************************************** GAME ********************************************************************** */
@@ -245,9 +246,19 @@ function startGame() {
     
     let stoneWidth = 30
     let stoneHeight = 20
+
+    let heartX = 100
+    let heartY = 10
+    let heartWidth = 20
+    let heartHeight = 20
+
     let jumpCount = game.width
     let jumpSpeed = 4
+    
+    let runCount = 0
+    let running = true
 
+    let score = 0
     let highScoreX = 212
     let highScoreY = 160
 /* ********************************************************************** START ********************************************************************* */
@@ -381,19 +392,29 @@ function startGame() {
                     jumpCount = game.width
                 }
             }, 30)
-/* ********************************************************************* HEART ********************************************************************** */                     
-            let heartX = 100
-            let heartY = 10
-            let heartWidth = 20
-            let heartHeight = 20
+/* ********************************************************************* HEART ********************************************************************** */
             setHeart(ctxUI, heartX, heartY, heartWidth, heartHeight)
 /* ********************************************************************* RUNNER ********************************************************************* */
             img.src = './img/player_big.png'
             img.onload = function() {
-                let runCount = 0
-                let score = 0
                 let runnerInterval = setInterval(() => {
-                    ctxG.clearRect(0, floorY - charHeight - 20, charWidth + leftX, charHeight + 20)
+                    ctxG.clearRect(0, floorY - charHeight - 20, charWidth + leftX, charHeight + 20)          
+                    // press 'Space' to jump
+                    window.onkeypress = function(e) {
+                        if(e.key === ' ') {
+                            running = false
+                            sound('./sound/apricotjumpbounce-jump.ogg')
+                            // switch back                          
+                            setTimeout(() => {
+                                running = true
+                            }, 456);
+                            // remove jump sound                         
+                            setTimeout(() => {
+                                let sound = document.getElementById('apricotjumpbounce-jump.ogg')
+                                sound.remove()
+                            }, 800);
+                        }
+                    }
                     if(running === true) {
                         // running
                         ctxG.drawImage(img, runCount, 0, charWidth, charHeight, leftX, floorY - charHeight, charWidth, charHeight) 
@@ -423,7 +444,7 @@ function startGame() {
                     }
                     // score jumps
                     if(localStorage.getItem('score')) {
-                        score = localStorage.getItem('score')
+                        score = JSON.parse(localStorage.getItem('score'))
                     }
                     ctxUI.clearRect(10, 12, 90, 12)
                     ctxUI.font = '12px Arial'
@@ -467,29 +488,26 @@ function startGame() {
                                     sound('./sound/round_end.wav')
                                     // entry
                                     if(score > 0) {
-                                        let input = document.createElement('input')
-                                        input.type = 'text'
-                                        input.setAttribute('maxlength', 3)
                                         if(playerArr.length < 10) {
                                             pressEnter(ctxUI)
                                             // set input to page
-                                            document.body.append(input)
-                                            controlInput(input, playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
+                                            setInput(playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
                                         } else {
-                                            playerArr.forEach(item => {
-                                                if(score > item.score) {
-                                                    pressEnter(ctxUI)
-                                                    // set input to page
-                                                    document.body.append(input)
-                                                    controlInput(input, playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
-                                                    return
-                                                } /////////////////////////////////////////////////// else?
-                                            })
+                                            if(playerArr.find(x => {x.score < score})) {
+                                                pressEnter(ctxUI)
+                                                // set input to page
+                                                setInput(playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
+                                            } else {
+                                                setTimeout(() => {
+                                                    // restart Game
+                                                    restartGame(ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound, highscore)
+                                                }, 2000)
+                                            }
                                         }
                                     } else {
                                         setTimeout(() => {
                                             // restart Game
-                                            restartGame(ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
+                                            restartGame(ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound, highscore)
                                         }, 2000)
                                     }
                                 } else {
@@ -510,24 +528,7 @@ function startGame() {
                     }
                 }, 120)
             }
-/* ****************************************************************** ACTION JUMP ****************************************************************** */           
-            // press 'Space' to jumpcreateS
-            let running = true
-            window.onkeypress = function(e) {
-                if(e.key === ' ') {
-                    running = false
-                    sound('./sound/apricotjumpbounce-jump.ogg')
-                    // switch back                          
-                    setTimeout(() => {
-                        running = true
-                    }, 456);
-                    // remove jump sound                         
-                    setTimeout(() => {
-                        let sound = document.getElementById('apricotjumpbounce-jump.ogg')
-                        sound.remove()
-                    }, 800);
-                }
-            }
+/* ****************************************************************** RUN GAME ****************************************************************** */
         }
     }
 }
