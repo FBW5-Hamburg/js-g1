@@ -105,7 +105,7 @@ window.onload = () => {
     cartIcon(cart)
     // message for empty cart
     if (flag.classList.length === 0) {
-        if (cart.length === 0) {
+        if (!cart || cart.length === 0) {
             let h2 = document.createElement('h2')
             h2.innerText = "The cart is empty."
             document.querySelector('main').append(h2)
