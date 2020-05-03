@@ -5,15 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <link href="./fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet" type="text/css" />
-    <script src="./js/product.js"></script>
-    <script src="./js/script.js"></script>
     <script src="./js/class.js"></script>
+    <script src="./js/script.js"></script>
     <title>Shoes</title>
 </head>
 <body>
-    <header></header>
+    <header>
+<!-- -------------------------------------------- LOGO ----------------------------------------------- -->
+        <a href="/index.html" name="logo" id="logo"><img src="/img/adidas-logo.png" alt=""></a>
+<!-- -------------------------------------------- NAV MAIN ----------------------------------------------- -->
+        <input  type="checkbox"  id="toggle-main">
+        <label for="toggle-main">
+            <div></div>
+            <ul id="nav-main" class="nav">
+                <li>
+                    <a href="#" name="collection">
+                        Collection
+                    </a>
+                    <ul>
+                        <li><a href="./shoes.html" name="shoes">Shoes</a></li>
+                        <li><a href="./sportswear.html" name="sportswear">Sportswear</a></li>
+                        <li><a href="#" name="accessoires">Accessoires</a></li>
+                        <li><a href="#" name="sports">Sports</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Company</a>
+                </li>
+                <li>
+                    <a href="#">Press</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+<!-- -------------------------------------------- NAV SUB ----------------------------------------------- -->
+        <input  type="checkbox"  id="toggle-sub">
+        <label for="toggle-sub">
+            <div></div>
+            <ul id="nav-sub" class="nav">
+                <li>
+                    <a href="./cart.html" id="emptyCart" name="cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="./cart.html" id="fullCart" name="cartFull"> <i class="fas fa-cart-arrow-down"></i></a>
+                </li>
+                <li>
+                    <a href="#" name="account"><i class="far fa-user-circle"></i></a>
+                </li>
+                <li>
+                    <a href="#" name="pinterest"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <li>
+                    <a href="#" name="instagram"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#" name="facebook"><i class="fab fa-facebook"></i></a>
+                </li>
+            </ul>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        </label>
+    </header>
     <main>
-        <span id="category">shoes</span>
+        <span id="flag" class="1 shoes"></span>
     </main>
     <div id="navbar"></div>
     <footer></footer>
