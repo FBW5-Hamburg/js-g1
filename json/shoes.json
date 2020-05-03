@@ -2,36 +2,36 @@
 	"arrProducts": [
 		{
 			"category": "Shoes",
-			"url": "/shoes/superstar.html",
-			"imgSmall": "/img/Superstar_Schuh_klein.png",
-			"imgLarge": "/img/Superstar_Schuh_gross.jpg",
+			"url": "./shoes/superstar.html",
+			"imgSmall": "./img/Superstar_Schuh_klein.png",
+			"imgLarge": "./img/Superstar_Schuh_gross.jpg",
 			"name": "Superstar",
 			"price": 99.95,
 			"specification": "In den 70ern wurde er ursprünglich als Basketballschuh designt und in den 80ern dann von der Hip-Hop-Szene entdeckt. Heute ist der adidas Superstar eine echte Streetwear-Ikone und nicht mehr von unseren Füßen wegzudenken. Als absolutes Signature-Detail ist die Shell Toe seit jeher fester Bestandteil des Looks. Sie sieht aber nicht nur stylish aus, sondern schützt wie damals beim Basketball deine Zehen.Das kommt im Alltag ganz schön praktisch – egal, ob bei Festivals oder in einer vollen U-Bahn!  Abgerundet wird das Ganze von den gezackten 3-Streifen und dem Superstar Logo für einen authentischen Look."
 		},	
 		{
 			"category": "Shoes",
-			"url": "/shoes/samba.html",
-			"imgSmall": "/img/Samba_Schuh_klein.png",
-			"imgLarge": "/img/Samba_Schuh_gross.jpg",
+			"url": "./shoes/samba.html",
+			"imgSmall": "./img/Samba_Schuh_klein.png",
+			"imgLarge": "./img/Samba_Schuh_gross.jpg",
 			"name": "Samba",
 			"price": 89.95,
 			"specification": "Der Samba feierte sein Debüt auf dem Fußballplatz, heute ist er ein zeitloser Streetstyle-Klassiker. Dieser Sneaker bleibt dem Original mit einem Obermaterial aus weichem Leder und Overlays aus Wildleder treu."
 		},
 		{
 			"category": "Shoes",
-			"url": "/shoes/NMD_R1.html",
-			"imgSmall": "/img/NMD_R1_Schuh_Grau_EH0044_01_standard.png",
-			"imgLarge": "/img/NMD_R1_Schuh_Grau_EH0044_01_standard.jpg",
+			"url": "./shoes/NMD_R1.html",
+			"imgSmall": "./img/NMD_R1_Schuh_Grau_EH0044_01_standard.png",
+			"imgLarge": "./img/NMD_R1_Schuh_Grau_EH0044_01_standard.jpg",
 			"name": "NMD_R1",
 			"price": 139.95,
 			"specification": "High-tech design meets archive attitude. These NMD_R1 Shoes combine the best of adidas' latest technical innovations with the look of '80s racing styles. The colour-fading midsole features a big plug detail. Soft, stretchy knit hugs the foot, and responsive cushioning gives a comfortable feel."
 		},
 		{
 			"category": "Shoes",
-			"url": "/shoes/CONTINENTAL_80.html",
-			"imgSmall": "/img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.png",
-			"imgLarge": "/img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.jpg",
+			"url": "./shoes/CONTINENTAL_80.html",
+			"imgSmall": "./img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.png",
+			"imgLarge": "./img/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.jpg",
 			"name": "CONTINENTAL 80",
 			"price": 76.97,
 			"specification": "Rewind it back to the era of the aerobics class. The Continental 80 is an authentic bringback of an indoor sneaker from the '80s. These low top sneakers are made of smooth leather. They show off a swooping two-tone stripe on the side and a split rubber cupsole."
@@ -39,8 +39,8 @@
 		{
 			"category": "Shoes",
 			"url": "",
-			"imgSmall": "/img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.png",
-			"imgLarge": "/img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.jpg",
+			"imgSmall": "./img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.png",
+			"imgLarge": "./img/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.jpg",
 			"name": "NITE JOGGER SCHUH",
 			"price": 111.95,
 			"specification": "Perfekt gestylt, bei Tag und bei Nacht! Dieser Sneaker ist vom Nite Jogger aus den 80ern inspiriert und kommt mit reflektierenden Details. Mit seinem Obermaterial aus strapazierfähigem Nylon ist er leicht und gleichzeitig robust. Außerdem sorgt seine reaktionsfreudige Dämpfung für ein unschlagbares Tragegefühl."
@@ -48,8 +48,8 @@
 		{
 			"category": "Shoes",
 			"url": "",
-			"imgSmall": "/img/SL_72_Schuh_Grun_EG5198_01_standard.png",
-			"imgLarge": "/img/SL_72_Schuh_Grun_EG5198_01_standard.jpg",
+			"imgSmall": "./img/SL_72_Schuh_Grun_EG5198_01_standard.png",
+			"imgLarge": "./img/SL_72_Schuh_Grun_EG5198_01_standard.jpg",
 			"name": "SL 72 SCHUH",
 			"price": 89.95,
 			"specification": "Das Jahr 1972 ist uns bis heute in Erinnerung geblieben. Die besten Athleten der Welt kämpften um Medaillen, und mit dem SL 72 Schuh feierte das legendäre Trefoil sein Debüt. Mit der klassischen Silhouette und authentischen Materialien greifen wir das Original von damals wieder auf. Genau wie bei der Version aus den 70ern ist der Zehenbereich schmal geschnitten. Außerdem garantiert die EVA-Zwischensohle optimale Dämpfung, während die Gummiaußensohle mit einem griffigen Profil im Retrostyle das Ganze abrunde"
@@ -57,17 +57,17 @@
 		{
 			"category": "Shoes",
 			"url": "",
-			"imgSmall": "/img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.png",
-			"imgLarge": "/img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.jpg",
+			"imgSmall": "./img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.png",
+			"imgLarge": "./img/Campus_ADV_Schuh_Gelb_EF8474_01_standard.jpg",
 			"name": "CAMPUS SCHUH",
 			"price": 89.95,
 			"specification": "Dieser cleane Court-Style-Sneaker ist der perfekte Begleiter für den Alltag. Er ist niedrig geschnitten und kommt mit seinem Obermaterial aus weichem Leder und den gezackten 3-Streifen ganz zeitlos daher. Die Gummi-Cupsohle rundet den Look ab. Für den adidas Signature-Style dürfen natürlich das Trefoil Logo auf der Zunge und dem Detail im Fersenbereich nicht fehlen."
 		},
 		{
 			"category": "Shoes",
-			"url": "/shoes/Falcon.html",
-			"imgSmall": "/img/Rom_Schuh_Braun_EE5747_01_standard.png",
-			"imgLarge": "/img/Rom_Schuh_Braun_EE5747_01_standard.jpg",
+			"url": "./shoes/Falcon.html",
+			"imgSmall": "./img/Rom_Schuh_Braun_EE5747_01_standard.png",
+			"imgLarge": "./img/Rom_Schuh_Braun_EE5747_01_standard.jpg",
 			"name": "Falcon",
 			"price": 99.95,
 		    "specification": "Die bunten TPU-Details und das Finish im Metallic-Look stehen für den 90s-Look.Die dämpfende, leichte EVA-Zwischensohle und das atmungsaktive Mesh-Futter sorgen für angenehmen Tragekomfort."
@@ -76,7 +76,7 @@
 			"category": "Shoes",
 			"url": "/shoes/OZWEEGO.html",
 			"imgSmall": "" ,
-			"imgLarge": "./img/OZWEEGO_Schuh_Schwarz_EE6999_01_standard.jpg",
+			"imgLarge": "../img/OZWEEGO_Schuh_Schwarz_EE6999_01_standard.jpg",
 			"name": "OZWEEGO",
 			"price": 119.95,
 			"specification": "Dieser Schuh ist von den späten 90ern und frühen 2000ern inspiriert und liefert einen stylishen Mix aus Retro-Elementen und futuristischem Design. Sein Obermaterial kombiniert Mesh, Wildleder und glattes TPU. Außerdem bietet er im Vorfuß- und Fersenbereich gezielten Halt und Dämpfung für ein superbequemes Tragegefühl."
