@@ -29,7 +29,7 @@ function cartIcon(array){
     // select cart icon
     let emptyCart = document.querySelector('#emptyCart')
     let fullCart = document.querySelector('#fullCart')
-    if(array.length > 0){
+    if(array && array.length > 0){
         emptyCart.style.display =  'none'
         fullCart.style.display =  'block'
     } else {
@@ -96,7 +96,7 @@ window.onload = () => {
     // find existing cartlist
     let cart = JSON.parse(localStorage.getItem('cartlist'))
     // add existing cartlist items to cartArray 
-    if(!cart.length === 0) {
+    if(cart) {
         cart.forEach(element =>{
             cartArray.push(element)   
         })
