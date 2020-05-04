@@ -143,7 +143,7 @@ function sound(src) {
 // press enter
 function pressEnter(canvas) {
     // clear error message
-    canvas.clearRect(245, 140, 80, 20)
+    canvas.clearRect(245, 120, 80, 20)
     canvas.fillStyle = 'red'
     canvas.font = '18px Arial'
     // clear enter
@@ -165,7 +165,6 @@ function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound)
     document.body.append(input)
     // control Input
     let regex = new RegExp(/[a-zA-Z_]+/g)
-    console.log(regex.test(input.value) );
     // enter highscore
     window.onkeypress = function(e) {
         let result = regex.test(e.key)
@@ -244,7 +243,7 @@ function startGame() {
     let imgLength = 480
     let charLength = 48
     let floorY = game.height - 40
-    let leftX = 10
+    let leftX = 5
 
     let hillWidth_1 = 110
     let hillCount_1 = background_1.width
@@ -262,7 +261,7 @@ function startGame() {
     let heartHeight = 20
 
     let jumpCount = game.width
-    let jumpSpeed = 4
+    let jumpSpeed = 5
     
     let runCount = 0
     let running = true
@@ -400,7 +399,7 @@ function startGame() {
                 } else {
                     jumpCount = game.width
                 }
-            }, 30)
+            }, 40)
 /* ********************************************************************* HEART ********************************************************************** */
             setHeart(ctxUI, heartX, heartY, heartWidth, heartHeight)
 /* ********************************************************************* RUNNER ********************************************************************* */
@@ -409,7 +408,7 @@ function startGame() {
                 let runnerInterval = setInterval(() => {
                     ctxG.clearRect(0, floorY - charHeight - 20, charWidth + leftX, charHeight + 20)          
                     // press 'Space' to jump
-                    window.onkeypress = function(e) {
+                    window.onkeyup = function(e) {
                         if(e.key === ' ') {
                             running = false
                             sound('./sound/apricotjumpbounce-jump.ogg')
@@ -502,7 +501,7 @@ function startGame() {
                                             // set input to page
                                             setInput(playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
                                         } else {
-                                            if(playerArr.find(x => {x.score < score})) {
+                                            if(playerArr.find(x => x.score < score)) {
                                                 pressEnter(ctxUI)
                                                 // set input to page
                                                 setInput(playerArr, ctxBG_1, ctxBG_2, ctxR, ctxG, ctxUI, gameSound)
