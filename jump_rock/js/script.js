@@ -1,3 +1,5 @@
+"use strict"
+
 /* ********************************************************************** FUNCTIONS ********************************************************************** */
 // create hill
 function createHill_1(canvas, ground, hillWidth, counter) {
@@ -140,18 +142,19 @@ function sound(src) {
 }
 // press enter
 function pressEnter(canvas) {
+    // clear error message
+    canvas.clearRect(245, 140, 80, 20)
     canvas.fillStyle = 'red'
     canvas.font = '18px Arial'
+    // clear enter
     canvas.clearRect(250, 110, 80, 40)
     canvas.fillText("Press 'Enter'", 245, 110)
 }
 // error message
-function setErrorM(canvas5, input, regex) {
-    if(regex.test(input.value) === false) {
-        canvas5.fillStyle = 'red'
-        canvas5.font = '18px Arial'
-        canvas5.fillText('Only letters!', 245, 140)
-    }
+function setErrorM(canvas5) {
+    canvas5.fillStyle = 'red'
+    canvas5.font = '18px Arial'
+    canvas5.fillText('Only letters!', 245, 140)
 }
 // create and control Input
 function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound) {
@@ -161,19 +164,19 @@ function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound)
     input.setAttribute('maxlength', 3)
     document.body.append(input)
     // control Input
-    let regex = new RegExp(/[a-zA-Z_]*/)
-    input.onchange = () => {
-        // clear error message
-        canvas5.clearRect(245, 140, 80, 20)
-        // set error message
-        if(regex.test(input.value) === false) {
-            setErrorM(canvas5, input, regex)
-        }
-    }
+    let regex = new RegExp(/[a-zA-Z_]+/g)
+    console.log(regex.test(input.value) );
     // enter highscore
     window.onkeypress = function(e) {
-        if(e.key === 'Enter') {
-            if(regex.test(input.value) === false) {
+        let result = regex.test(e.key)
+        if(result === false) {
+            // clear error message
+            canvas5.clearRect(245, 120, 110, 40)
+            setErrorM(canvas5)
+        } else {
+            // clear error message
+            canvas5.clearRect(245, 120, 110, 40)
+            if(e.key === 'Enter') {
                 // highscore list
                 let name = input.value
                 if(!name) {
@@ -192,14 +195,10 @@ function setInput(playerArr, canvas1, canvas2, canvas3, canvas4, canvas5, sound)
                     playerArr.push(player)
                     localStorage.setItem('highscore', JSON.stringify(playerArr.sort((a, b) => {return b.score - a.score})))
                 }
-                // clear user interface
-                canvas5.clearRect(245, 140, 80, 20)
                 // clear input
                 document.body.removeChild(input)
                 // restart game
                 restartGame(canvas1, canvas2, canvas3, canvas4, canvas5, sound, highscore)
-            } else {
-                setErrorM(canvas5, input, regex)
             }
         }
     }
@@ -309,7 +308,7 @@ function startGame() {
     ctxUI.font = '18px Arial'
     ctxUI.fillText("Press 'Space' to jump!", 198, 90)
     // game sound
-    gameSound = document.getElementById('random silly chip song.ogg')
+    let gameSound = document.getElementById('random silly chip song.ogg')
     if(gameSound) {
         gameSound.remove()
         sound('./sound/random silly chip song.ogg')
